@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="left">
-  <a href="https://github.com/MDBrodskiy/Random_Phenomena/tree/master/LICENSE">
+  <a href="https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/LICENSE">
     <img src="images/LicenseImage.svg" alt="license" width="100" height="24"></a>
 </p>
 <br/>
@@ -9,19 +9,19 @@
 
 <!-- BACKGROUND & TITLE -->
 <p align="center">
-  <a href="https://github.com/MDBrodskiy/Random_Phenomena">
+  <a href="https://github.com/MDBrodskiy/Quantum_Mechanics">
     <img src="images/background.jpg" alt="background">
   </a>
-  <h3 align="center">Random Phenomena</h3>
+  <h3 align="center">Quantum Mechanics</h3>
 <br />
 </p>
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [**Notes**](https://github.com/MDBrodskiy/Random_Phenomena/tree/master/Notes/)
-* [**Homework**](https://github.com/MDBrodskiy/Random_Phenomena/tree/master/Homework/)
-* [**Exams**](https://github.com/MDBrodskiy/Random_Phenomena/tree/master/Exams/)
+* [**Notes**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Notes/)
+* [**Homework**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Homework/)
+* [**Exams**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Exams/)
 
 <!--
   * [**Chapter 1**](#Notes/Chapter\ 1)
@@ -30,7 +30,7 @@
 -->
 
 
-An assortment of lecture notes and exams from Northeastern University's EECE3468 (Spring 2025)
+An assortment of lecture notes and exams from Northeastern University's PHYS4115 (Spring 2025)
 <br/> <br/> 
 Open sourced **LaTeX** Templates [here](https://www.latextemplates.com/).
 <br/>
@@ -46,6 +46,6 @@ Authentication:
 Cloning This Repository
 </br>&nbsp;&nbsp;with **command line interface**:
     <pre>    
-    **$** git clone https://github.com/MDBrodskiy/Random_Phenomena.git    
+    **$** git clone https://github.com/MDBrodskiy/Quantum_Mechanics.git    
     **$** **>**  **_**
     </pre>
