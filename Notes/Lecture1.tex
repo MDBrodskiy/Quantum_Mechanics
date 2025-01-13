@@ -327,6 +327,178 @@
 
     \end{itemize}
 
+  \item Quantum State Vectors
+
+    \begin{itemize}
+
+      \item The kets ($\ket{\psi}$) obey many rules of ordinary spacial vectors
+
+      \item $\ket{\psi}$ is a quantum state vector and is part of a vector space called a Hilbert Space
+
+      \item The dimensionality of the Hilbert Space is determined by the physics at hand
+
+      \item In the Stern-Gerlach experiment the Hilbert Space has just two states ($\ket{+}$ and $\ket{-}$)
+
+        \begin{itemize}
+
+          \item These states form a basis like unit vectors $\hat{i},\hat{j},\hat{k}$ for 3-D space. These basis vectors are normalized, orthogonal, and complete
+            
+            \begin{itemize}
+
+              \item Normailization: $\hat{i}\cdot\hat{i}=\hat{j}\cdot\hat{j}=\hat{k}\cdot\hat{k}=1$
+
+              \item Orthogonality: $\hat{i}\cdot\hat{j}=\hat{i}\cdot\hat{k}=\hat{j}\cdot\hat{k}=0$
+
+              \item Completeness: $\vec{A}=a_x\hat{i}+a_y\hat{j}+a_z\hat{k}$
+
+              \item Note: The dot product (or scalar product) displayed in the normalization and orthogonality conditions is central to these properties
+
+            \end{itemize}
+
+          \item For the $S_z$ measurement, the basis states are: $\ket{+}$ and $\ket{-}$ and are referred to as the ``$S_z$ basis''
+
+            \begin{itemize}
+
+              \item Since this is a complete basis, a general state is (where $a$ and $b$ are complex numbers):
+
+                $$\ket{\psi}=a\ket{+}+b\ket{-}$$
+
+            \end{itemize}
+
+          \item To discuss orthogonality and normalization (orthonormality) we need to understand how scalar products apply to kets
+
+          \item The complex-conjugated quantum state vector is called a 'bra' in the Dirac notation of quantum mechanics (note the asterisk indicates the complex conjugate):
+
+            $$\bra{\psi}=a^*\bra{+}+b^*\bra{-}$$
+
+        \end{itemize}
+
+      \item The scalar product in quantum mechanics is defined as:
+
+        $$(\bra{\psi})(\ket{\psi})=\braket{\psi}$$
+
+        \begin{itemize}
+
+          \item ``bra-ket'' or bracket
+
+          \item For example:
+
+            $$(\bra{+})(\ket{-})=\bra{+}\ket{-}$$
+
+          \item This defines an inner product between two state vectors
+
+          \item In analogy to 3-D spatial vectors, this is also called a projection
+
+          \item Given the analogs, we may write that normality is defined as:
+
+            $$\braket{+}=\braket{-}=1$$
+
+          \item Furthermore, orthogonality may be defined as:
+
+            $$\bra{+}\ket{-}=\bra{-}\ket{+}=0$$
+
+          \item Completeness is then defined as:
+
+            $$\ket{\psi}=a\ket{+}+b\ket{-}$$
+
+          \item With these components, we can then write:
+
+            $$\bra{+}\ket{\psi}=\bra{+}(a\ket{+}+b\ket{-})=\bra{+|a}\ket{+}+\bra{+|b}\ket{-}=a\braket{+}+b\bra{+}\ket{-}$$
+
+            \begin{itemize}
+
+              \item This can then be simplified with our properties to get:
+
+                $$\bra{+}\ket{\psi}=a$$
+
+              \item Likewise, we may write:
+
+                $$\bra{-}\ket{\psi}=b$$
+
+            \end{itemize}
+
+          \item Using these results, we may rewrite the wave function as:
+
+            $$\ket{\psi}=\bra{+}\ket{\psi}\ket{+}+\bra{-}\ket{\psi}\ket{-}$$
+            $$\ket{\psi}=\ket{+}\bra{+}\ket{\psi}+\ket{-}\bra{-}\ket{\psi}$$
+            $$\ket{\psi}=\underbrace{(\ket{+}\bra{+}+\ket{-}\bra{-})}_1\ket{\psi}$$
+
+            \begin{itemize}
+
+              \item We can note that the identity is equivalent to one
+
+            \end{itemize}
+
+          \item We can also reverse the projection to write:
+
+            $$\bra{\psi}\ket{+}=\bra{+|a^*}\ket{+}+\bra{-|b^*}\ket{+}=a^*\braket{+}+b^*\bra{-}\ket{+}=a^*$$
+
+            \begin{itemize}
+
+              \item This gives us the result that (note this holds for any state):
+
+                $$\bra{\psi}\ket{+}=\bra{+}\ket{\psi}^*\Rightarrow \bra{\phi}\ket{\psi}=\bra{\psi}\ket{\phi}^*$$
+
+              \item In quantum mechanics, state vectors must be normalized since they describe a situation where the quantum state has probability 1
+
+                $$\braket{\psi}=(a^*\bra{+}+b^*\bra{-})(a\ket{+}+b\ket{-})$$
+                $$=a^*a\braket{+}+a^*b\bra{+}\ket{-}+ab^*\bra{-}\ket{+}+b^*b\braket{-}$$
+                $$\braket{\psi}=a^*a+b^*b=|a|^2+|b|^2=1$$
+
+              \item Equivalently, we may write:
+
+                $$|\bra{+}\ket{\psi}|^2+|\bra{-}\ket{\psi}|^2=1$$
+
+            \end{itemize}
+
+        \end{itemize}
+
+      \item In quantum mechanics, the probability that the state $\ket{\psi}$ is measured as spin up is $P_{S_z=+\frac{\hbar}{2}}=|\bra{+}\ket{\psi}|^2$
+
+      \item Equivalently, the probability that the state $\ket{\psi}$ is measures as spin down is $P_{S_z=-\frac{\hbar}{2}}=|\bra{-}\ket{\psi}|^2$
+
+        \begin{itemize}
+
+          \item We can use a shorthand notation of $P_+$ for $S_z=+\dfrac{\hbar}{2}$ and $P_-$ for $S_z=-\dfrac{\hbar}{2}$
+
+          \item We may observe that the coefficients of the quantum state function contain the information regarding the probability
+
+          \item This leads to Postulate 4 of Quantum Mechanics (for a 1/2-spin system)
+
+            \begin{itemize}
+
+              \item The probability of obtaining the value $\pm\hbar/2$ in a measurement of the observable, $S_z$, on a system in the state $\ket{\psi}$ is $P_{\pm}=|\bra{\pm}\ket{\psi}|^2$, where $\ket{\pm}$ is the basis ket of $S_z$ corresponding to the result $\pm\hbar/2$
+
+              \item $\bra{-}\ket{\psi}$ is referred to as the probability amplitude (or just amplitude)
+
+            \end{itemize}
+
+        \end{itemize}
+
+      \item For the Stern-Gerlach experiments in which a different axis was tested after the first analyzer, we may write:
+
+        $$|_x\bra{+}\ket{+}|^2=|_x\bra{-}\ket{+}|^2=|_x\bra{+}\ket{-}|^2=|_x\bra{-}\ket{-}|^2=\frac{1}{2}$$
+
+      \item Since $\ket{+}$ and $\ket{-}$ form a complete basis, we can write:
+
+        $$\ket{+}_x=a\ket{+}+b\ket{-}$$
+        $$\ket{-}_x=c\ket{+}+d\ket{-}$$
+
+        \begin{itemize}
+
+          \item Per the results of the Stern-Gerlach experiments, we may write:
+
+            $$|a|^2=|b|^2=|c|^2=|d|^2=\frac{1}{2}$$
+
+          \item This means:
+
+            $$\ket{+}_x=\frac{e^{i\alpha}}{\sqrt{2}}\left( \ket{+}+\ket{-} \right)$$
+            $$\ket{-}_x=\frac{1}{\sqrt{2}}\left( \ket{+}+e^{i\beta}\ket{-} \right)$$
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
