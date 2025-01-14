@@ -20,7 +20,9 @@
 ## Table of Contents
 
 * [**Notes**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Notes/)
+    * [**Lecture 1**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Notes/Lecture1.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Homework/)
+    * [**Homework 1**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Notes/HW1.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Exams/)
 
 <!--
