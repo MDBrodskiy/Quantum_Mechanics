@@ -91,8 +91,8 @@
 
             This gives us:
 
-            $$P_{+y}=\Big|\frac{1}{\sqrt{2}}(\bra{+}+i\bra{-})\frac{1}{5}(3\ket{+}+4\ket{-})\Big|^2$$
-            $$P_{+y}=\frac{1}{50}\Big|3\braket{+}+4i\braket{-}\Big|^2$$
+            $$P_{+y}=\Big|\frac{1}{\sqrt{2}}(\bra{+}+i\bra{-})\frac{1}{5}(3\ket{+}-4\ket{-})\Big|^2$$
+            $$P_{+y}=\frac{1}{50}\Big|3\braket{+}-4i\braket{-}\Big|^2$$
             $$\boxed{P_{+y}=\frac{25}{50}=\frac{1}{2}}$$
 
             And, consequently, we get:
@@ -118,13 +118,13 @@
 
             We then check the $S_y$ orientation to get:
 
-            $$P_{+y}=\Big|\frac{1}{\sqrt{2}}(\bra{+}+i\bra{-})\frac{1}{\sqrt{5}}(\ket{+}+2i\ket{-})\Big|^2$$
-            $$P_{+y}=\frac{1}{10}\Big|\braket{+}-2\braket{-}\Big|^2$$
-            $$\boxed{P_{+y}=\frac{1}{10}}$$
+            $$P_{+y}=\Big|\frac{1}{\sqrt{2}}(\bra{+}+i\bra{-})\frac{1}{\sqrt{5}}(\ket{+}-2i\ket{-})\Big|^2$$
+            $$P_{+y}=\frac{1}{10}\Big|\braket{+}+2\braket{-}\Big|^2$$
+            $$\boxed{P_{+y}=\frac{9}{10}}$$
 
             And, consequently:
 
-            $$\boxed{P_{-y}=1-\frac{1}{10}=\frac{9}{10}}$$
+            $$\boxed{P_{-y}=1-\frac{9}{10}=\frac{1}{10}}$$
 
           \item Finally, we find the last quantum state vector probabilities as:
 
@@ -150,38 +150,37 @@
 
             Finally, we check the $S_y$ orientation to get:
 
-            $$P_{+y}=\Big|\frac{1}{\sqrt{2}}(\bra{+}+i\bra{-})\frac{1}{\sqrt{10}}(3\ket{+}+e^{\frac{\pi i}{3}}\ket{-})\Big|^2$$
-            $$P_{+y}=\frac{1}{20}\Big|(\bra{+}+i\bra{-})\left( 3\ket{+}+\left( \frac{1}{2}+\frac{\sqrt{3}}{2}i \right)\ket{-} \right)\Big|^2$$
-            $$\boxed{P_{+y}=\frac{10-3\sqrt{3}}{20}}$$
+            $$P_{+y}=\Big|\frac{1}{\sqrt{2}}(\bra{+}-i\bra{-})\frac{1}{\sqrt{10}}(3\ket{+}+e^{\frac{\pi i}{3}}\ket{-})\Big|^2$$
+            $$P_{+y}=\frac{1}{20}\Big|(\bra{+}-i\bra{-})\left( 3\ket{+}+\left( \frac{1}{2}+\frac{\sqrt{3}}{2}i \right)\ket{-} \right)\Big|^2$$
+            $$\boxed{P_{+y}=\frac{10+3\sqrt{3}}{20}}$$
 
             Consequently, we get:
 
-            $$\boxed{P_{-y}=1-\frac{10-3\sqrt{3}}{20}}=\frac{10+3\sqrt{3}}{20}$$
+            $$\boxed{P_{-y}=1-\frac{10+3\sqrt{3}}{20}}=\frac{10-3\sqrt{3}}{20}$$
 
         \end{enumerate}
 
       \item We can write the matrix forms of the up and down vectors as:
 
-        $$\ket{+}=\frac{1}{\sqrt{2}}\left( \begin{matrix} 1\\ 1\end{matrix} \right)\quad\text{ and }\quad\ket{-}=\frac{1}{\sqrt{2}}\left( \begin{matrix} 1\\ -1\end{matrix} \right)$$
+        $$\ket{+}=\left( \begin{matrix} 1\\ 0\end{matrix} \right)\quad\text{ and }\quad\ket{-}=\left( \begin{matrix} 0\\ 1\end{matrix} \right)$$
 
         \begin{enumerate}
 
           \item Using the above, we may multiply to write:
 
-            $$\ket{\psi_1}=\frac{3}{5\sqrt{2}}\left( \begin{matrix}1\\1\end{matrix} \right)+\frac{4}{5\sqrt{2}}\left( \begin{matrix} 1\\-1\end{matrix} \right)$$
-            $$\boxed{\ket{\psi_1}=\left( \begin{matrix}\dfrac{7}{5\sqrt{2}}\\\\-\dfrac{1}{5\sqrt{2}}\end{matrix} \right)}$$
+            $$\ket{\psi_1}=\frac{3}{5}\left( \begin{matrix}1\\0\end{matrix} \right)+\frac{4}{5}\left( \begin{matrix} 0\\1\end{matrix} \right)$$
+            $$\boxed{\ket{\psi_1}=\frac{1}{5}\left( \begin{matrix}3\\4\end{matrix} \right)}$$
 
           \item We use the same strategy to write:
 
-            $$\ket{\psi_2}=\frac{1}{\sqrt{5}\sqrt{2}}\left( \begin{matrix}1\\1\end{matrix} \right)+\frac{2i}{\sqrt{5}\sqrt{2}}\left( \begin{matrix} 1\\-1\end{matrix} \right)$$
-            $$\boxed{\ket{\psi_2}=\frac{1}{\sqrt{10}}\left( \begin{matrix} 1+2i\\1-2i\end{matrix} \right)}$$
+            $$\ket{\psi_2}=\frac{1}{\sqrt{5}}\left( \begin{matrix}1\\0\end{matrix} \right)+\frac{2i}{\sqrt{5}}\left( \begin{matrix} 0\\1\end{matrix} \right)$$
+            $$\boxed{\ket{\psi_2}=\frac{1}{\sqrt{5}}\left( \begin{matrix} 1\\2i\end{matrix} \right)}$$
 
           \item For the final quantum state vector, let us rewrite in rectangular for easier understanding:
 
             $$\ket{\psi_3}=\frac{3}{\sqrt{10}}\ket{+}+\left( \frac{1}{2\sqrt{10}}+\frac{\sqrt{3}i}{2\sqrt{10}} \right)\ket{-}$$
-            $$\ket{\psi_3}=\frac{3}{\sqrt{10}\sqrt{2}}\left( \begin{matrix}1\\1\end{matrix} \right)+\left( \frac{1}{2\sqrt{10}}+\frac{\sqrt{3}i}{2\sqrt{10}} \right)\frac{1}{\sqrt{2}}\left( \begin{matrix} 1\\-1\end{matrix} \right)$$
-            $$\ket{\psi_3}=\frac{3}{\sqrt{20}}\left( \begin{matrix}1\\1\end{matrix} \right)+\left( \frac{1}{2\sqrt{20}}+\frac{\sqrt{3}i}{2\sqrt{20}} \right)\left( \begin{matrix} 1\\-1\end{matrix} \right)$$
-            $$\boxed{\ket{\psi_3}=\frac{1}{2\sqrt{20}}\left( \begin{matrix} 7+\sqrt{3}i\\5-\sqrt{3}i\end{matrix} \right)}$$
+            $$\ket{\psi_3}=\frac{3}{\sqrt{10}}\left( \begin{matrix}1\\0\end{matrix} \right)+\left( \frac{1}{2\sqrt{10}}+\frac{\sqrt{3}i}{2\sqrt{10}} \right)\left( \begin{matrix} 0\\1\end{matrix} \right)$$
+            $$\boxed{\ket{\psi_3}=\frac{1}{2\sqrt{10}}\left( \begin{matrix} 6\\1+\sqrt{3}i\end{matrix} \right)}$$
 
         \end{enumerate}
 
@@ -191,17 +190,14 @@
 
           \item Using this, we may write:
 
-            $$P_+=\left[\frac{1}{\sqrt{2}}\left( \dfrac{7}{5\sqrt{2}}\quad -\dfrac{1}{5\sqrt{2}} \right)\left( \begin{matrix} 1\\ 1\end{matrix} \right)\right]^2$$
-            $$P_+=\left[\frac{7}{10}-\frac{1}{10}\right]^2$$
-            $$\boxed{P_+=\frac{36}{100}=\frac{9}{25}}$$
-
-            $$P_-=\left[\frac{1}{\sqrt{2}}\left( \dfrac{7}{5\sqrt{2}}\quad -\dfrac{1}{5\sqrt{2}} \right)\left( \begin{matrix} 1\\ -1\end{matrix} \right)\right]^2$$
-            $$P_-=\left[\frac{7}{10}+\frac{1}{10}\right]^2$$
-            $$\boxed{P_-=\frac{64}{100}=\frac{16}{25}}$$
+            $$P_+=\left[\left( \dfrac{3}{5}\quad \dfrac{4}{5} \right)\left( \begin{matrix} 1\\ 0\end{matrix} \right)\right]^2$$
+            $$P_+=\left[\frac{3}{5}\right]^2$$
+            $$\boxed{P_+=\frac{9}{25}}$$
+            $$\boxed{P_-=1-\frac{9}{25}=\frac{16}{25}}$$
 
             We then use the $S_x$ orientation to write:
 
-            $$P_{+x}=\left[\left( \dfrac{7}{5\sqrt{2}}\quad -\dfrac{1}{5\sqrt{2}} \right)\left( \begin{matrix} 1\\ 0\end{matrix} \right)\right]^2$$
+            $$P_{+x}=\left[\left( \dfrac{3}{5\sqrt{2}}\quad \dfrac{4}{5\sqrt{2}} \right)\left( \begin{matrix} 1\\ 1\end{matrix} \right)\right]^2$$
             $$\boxed{P_{+x}=\frac{49}{50}}$$
 
             And, consequently, we get:
@@ -210,9 +206,9 @@
 
             Then we check the $S_y$ orientation:
 
-            $$P_{+y}=\left[\frac{1}{\sqrt{2}}\left( \dfrac{7}{5\sqrt{2}}\quad -\dfrac{1}{5\sqrt{2}} \right)\left( \begin{matrix} 1\\ i\end{matrix} \right)\right]^2$$
-            $$P_{+y}=\frac{1}{100}\left[\left( 7\quad -1\right)\left( \begin{matrix} 1\\ i\end{matrix} \right)\right]^2$$
-            $$\boxed{P_{+y}=\frac{50}{100}=\frac{1}{2}}$$
+            $$P_{+y}=\left[\left( \dfrac{3}{5\sqrt{2}}\quad \dfrac{4}{5\sqrt{2}} \right)\left( \begin{matrix} 1\\ -i\end{matrix} \right)\right]^2$$
+            $$P_{+y}=\frac{1}{50}\left[\left( 7\quad -1\right)\left( \begin{matrix} 1\\ i\end{matrix} \right)\right]^2$$
+            $$\boxed{P_{+y}=\frac{25}{50}=\frac{1}{2}}$$
 
             Consequently, we get:
 
@@ -220,17 +216,14 @@
 
           \item We repeat the same for the next quantum state function:
 
-            $$P_+=\left[\frac{1}{\sqrt{20}}\left( 1+2i \quad 1-2i \right)\left( \begin{matrix} 1\\ 1\end{matrix} \right)\right]^2$$
-            $$P_+=\left[\frac{1}{\sqrt{20}}+\frac{1}{\sqrt{20}}\right]^2$$
-            $$\boxed{P_+=\frac{4}{20}=\frac{1}{5}}$$
-
-            $$P_-=\left[\frac{1}{\sqrt{20}}\left( 1+2i \quad 1-2i \right)\left( \begin{matrix} 1\\ -1\end{matrix} \right)\right]^2$$
-            $$P_-=\left[\frac{|4i|}{\sqrt{20}}\right]^2$$
-            $$\boxed{P_-=\frac{16}{20}=\frac{4}{5}}$$
+            $$P_+=\left[\frac{1}{\sqrt{5}}\left( 1 \quad 2i \right)\left( \begin{matrix} 1\\ 0\end{matrix} \right)\right]^2$$
+            $$P_+=\left[\frac{1}{\sqrt{5}}\right]^2$$
+            $$\boxed{P_+=\frac{1}{5}}$$
+            $$\boxed{P_-=1-\frac{1}{5}=\frac{4}{5}}$$
 
             We then check the $S_x$ direction:
 
-            $$P_{+x}=\frac{1}{10}\left[\left( 1+2i \quad 1-2i \right)\left( \begin{matrix} 1\\ 0\end{matrix} \right)\right]^2$$
+            $$P_{+x}=\frac{1}{10}\left[\left( 1 \quad 2i \right)\left( \begin{matrix} 1\\ 1\end{matrix} \right)\right]^2$$
             $$\boxed{P_{+x}=\frac{5}{10}=\frac{1}{2}}$$
 
             Consequently, we may find:
@@ -239,27 +232,23 @@
 
             Finally, we find the $S_y$ orientation probability:
 
-            $$P_{+y}=\frac{1}{20}\left[\left( 1+2i\quad 1-2i \right)\left( \begin{matrix} 1\\ i\end{matrix} \right)\right]^2$$
-            $$P_{+y}=\frac{1}{20}\left[3+3i\right]^2$$
-            $$\boxed{P_{+y}=\frac{18}{20}=\frac{9}{10}}$$
+            $$P_{+y}=\frac{1}{10}\left[\left( 1\quad 2i \right)\left( \begin{matrix} 1\\ -i\end{matrix} \right)\right]^2$$
+            $$P_{+y}=\frac{1}{10}\left[3\right]^2$$
+            $$\boxed{P_{+y}=\frac{9}{10}}$$
 
             Consequently, we get:
 
-            $$\boxed{P_{-y}=1-\frac{18}{20}=\frac{1}{10}}$$
+            $$\boxed{P_{-y}=1-\frac{9}{10}=\frac{1}{10}}$$
 
           \item 
 
-            $$P_+=\left[\frac{1}{2\sqrt{40}}\left( 7+\sqrt{3}i \quad 5-\sqrt{3}i \right)\left( \begin{matrix} 1\\ 1\end{matrix} \right)\right]^2$$
-            $$P_+=\left[\frac{7}{2\sqrt{40}}+\frac{5}{2\sqrt{40}}\right]^2$$
+            $$P_+=\left[\frac{1}{2\sqrt{10}}\left(6 \quad 1+\sqrt{3}i \right)\left( \begin{matrix} 1\\ 0\end{matrix} \right)\right]^2$$
             $$\boxed{P_+=\frac{36}{40}=\frac{9}{10}}$$
-
-            $$P_+=\left[\frac{1}{2\sqrt{40}}\left( 7+\sqrt{3}i \quad 5-\sqrt{3}i \right)\left( \begin{matrix} 1\\ -1\end{matrix} \right)\right]^2$$
-            $$P_-=\left[\frac{|2+2\sqrt{3}i|}{\sqrt{40}}\right]^2$$
-            $$\boxed{P_-=\frac{4}{40}=\frac{1}{10}}$$
+            $$\boxed{P_-=1-\frac{9}{10}=\frac{1}{10}}$$
 
             We then check the $S_x$ orientation probability:
 
-            $$P_{+x}=\frac{1}{80}\left[\left( 7+\sqrt{3}i \quad 5-\sqrt{3}i \right)\left( \begin{matrix} 1\\ 0\end{matrix} \right)\right]^2$$
+            $$P_{+x}=\frac{1}{80}\left[\left( 6 \quad 1+\sqrt{3}i \right)\left( \begin{matrix} 1\\ 1\end{matrix} \right)\right]^2$$
             $$\boxed{P_{+x}=\frac{52}{80}=\frac{13}{20}}$$
 
             Consequently, we find:
@@ -268,15 +257,13 @@
 
             We then find the $S_y$ orientation:
 
-            $$P_{+y}=\left[\frac{1}{2\sqrt{40}}\left( 7+\sqrt{3}i \quad 5-\sqrt{3}i \right)\left( \begin{matrix} 1\\ i\end{matrix} \right)\right]^2$$
-            $$P_{+y}=\frac{1}{160}\left[\left( 7+\sqrt{3}i \quad 5-\sqrt{3}i \right)\left( \begin{matrix} 1\\ i\end{matrix} \right)\right]^2$$
-            $$P_{+y}=\frac{1}{160}\left[\left( 7+\sqrt{3}i +5i+\sqrt{3} \right)\right]^2$$
-            $$P_{+y}=\frac{1}{160}\left[(7+\sqrt{3})+(5+\sqrt{3})i\right]^2$$
-            $$\boxed{P_{+y}=\frac{80+24\sqrt{3}}{160}=\frac{10+3\sqrt{3}}{20}}$$
+            $$P_{+y}=\left[\frac{1}{2\sqrt{20}}\left( 6 \quad 1+\sqrt{3}i \right)\left( \begin{matrix} 1\\ -i\end{matrix} \right)\right]^2$$
+            $$P_{+y}=\frac{1}{80}\left[\left( 6 +\sqrt{3} -i \right)\right]^2$$
+            $$\boxed{P_{+y}=\frac{40+12\sqrt{3}}{80}=\frac{10+3\sqrt{3}}{20}}$$
 
             Consequently, we find:
 
-            $$\boxed{P_{+y}=1-\frac{80+24\sqrt{3}}{160}=\frac{10-3\sqrt{3}}{20}}$$
+            $$\boxed{P_{+y}=1-\frac{40+12\sqrt{3}}{80}=\frac{10-3\sqrt{3}}{20}}$$
 
             We may observe that whether bra-ket notation or matrix form is used, the probability remains the same.
 
@@ -397,12 +384,12 @@
 
             We then check the $y$ orientation, which gives us:
 
-            $$P_{+y}=\frac{1}{50}\Big| (1\quad i)\left( \begin{matrix} 4\\3i \end{matrix} \right)\Big|^2$$
-            $$\boxed{P_{+y}=\frac{1}{50}}$$
+            $$P_{+y}=\frac{1}{50}\Big| (1\quad -i)\left( \begin{matrix} 4\\3i \end{matrix} \right)\Big|^2$$
+            $$\boxed{P_{+y}=\frac{49}{50}}$$
 
             Consequently, we may get:
 
-            $$\boxed{P_{-y}=1-\frac{1}{50}=\frac{49}{50}}$$
+            $$\boxed{P_{-y}=1-\frac{49}{50}=\frac{1}{50}}$$
 
           \item Function 2:
 
@@ -418,12 +405,12 @@
 
             We then check the $y$ orientation, which gives us:
 
-            $$P_{+y}=\frac{1}{50}\Big| (1\quad i)\left( \begin{matrix} 4\\-3i \end{matrix} \right)\Big|^2$$
-            $$\boxed{P_{+y}=\frac{49}{50}}$$
+            $$P_{+y}=\frac{1}{50}\Big| (1\quad -i)\left( \begin{matrix} 4\\-3i \end{matrix} \right)\Big|^2$$
+            $$\boxed{P_{+y}=\frac{1}{50}}$$
 
             Consequently, we may get:
 
-            $$\boxed{P_{-y}=1-\frac{49}{50}=\frac{1}{50}}$$
+            $$\boxed{P_{-y}=1-\frac{1}{50}=\frac{49}{50}}$$
 
           \item Function 3:
 
@@ -437,16 +424,16 @@
 
             We then check the $y$ orientation, which gives us:
 
-            $$P_{+y}=\frac{1}{50}\Big| (1\quad i)\left( \begin{matrix} -4\+3i \end{matrix} \right)\Big|^2$$
-            $$\boxed{P_{+y}=\frac{49}{50}}$$
+            $$P_{+y}=\frac{1}{50}\Big| (1\quad -i)\left( \begin{matrix} -4\+3i \end{matrix} \right)\Big|^2$$
+            $$\boxed{P_{+y}=\frac{1}{50}}$$
 
             Consequently, we may get:
 
-            $$\boxed{P_{-y}=1-\frac{49}{50}=\frac{1}{50}}$$
+            $$\boxed{P_{-y}=1-\frac{1}{50}=\frac{49}{50}}$$
 
         \end{enumerate}
 
-      \item We may observe that the $S_z$ and $S_x$ probabilities remained invariant. On the other hand, the $S_y$ probabilities were dependent on the phase; that is, for a $\pi/2$ change in phase, the probabilties switch (the up probability becomes the down probability and vice versa). We may observe that the probabilities are equivalent for $\ket{\psi_2}$ and $\ket{\psi_3}$.
+      \item We may observe that the $S_z$ and $S_x$ probabilities remained invariant. On the other hand, the $S_y$ probabilities were dependent on the phase; that is, for a $\pi/2$ change in phase, the probabilities switch (the up probability becomes the down probability and vice versa). We may observe that the probabilities are equivalent for $\ket{\psi_2}$ and $\ket{\psi_3}$.
 
     \end{enumerate}
 
