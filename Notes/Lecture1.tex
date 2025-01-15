@@ -492,12 +492,142 @@
 
           \item This means:
 
-            $$\ket{+}_x=\frac{e^{i\alpha}}{\sqrt{2}}\left( \ket{+}+\ket{-} \right)$$
-            $$\ket{-}_x=\frac{1}{\sqrt{2}}\left( \ket{+}+e^{i\beta}\ket{-} \right)$$
+            $$\ket{+}_x=\frac{1}{\sqrt{2}}\left( \ket{+}+e^{i\alpha}\ket{-} \right)$$
+            $$\ket{-}_x=\frac{1}{\sqrt{2}}\left( \ket{+}+e^{-i\beta}\ket{-} \right)$$
+
+          \item Therefore, only the relative phase of the weights are important
+
+          \item If experiment 1 is repeated, but with both analyzers aligned in the $x$ direction, then one may find:
+
+            $$P_{+x}=|\leftindex_x\braket{+}_x|^{2}=1$$
+            $$P_{-x}=|\leftindex_x\bra{-}\ket{+}_x|^{2}=0$$
+
+          \item Equivalently, we may write:
+
+            $$\frac{1}{2}\left( 1+e^{i(\alpha-\beta)} \right)=0$$
+            $$e^{i(\alpha-\beta)}=1$$
+
+          \item And finally, we get our condition:
+
+            $$e^{i\alpha}=e^{i\beta}$$
+
+          \item We are free to choose $\alpha=\beta=0$
+
+          \item Thus, we can express $x$-axis ket alignment as:
+
+            $$\ket{\pm}_x=\frac{1}{\sqrt{2}}(\ket{+}\pm\ket{-})$$
 
         \end{itemize}
 
     \end{itemize}
+
+  \item Superposition of States
+
+    $$\ket{\psi}=a\ket{+}+b\ket{-}$$
+
+    \begin{itemize}
+
+      \item The above is a superposition state (or a coherent state) because of the importance of the relative phase of the two terms
+
+      \item A contrasting state with different possible outcomes but no definite phase relation is called a mixed state
+      
+      \item A mixed state is not described by a quantum state $\ket{\psi}$, but instead a density matrix
+
+      \item In matrix form, we can write:
+
+        $$\ket{\pm}_x=\frac{1}{\sqrt{2}}\left( \begin{matrix} 1\\\pm1\end{matrix} \right)$$
+
+        \begin{itemize}
+
+          \item Note the top refers to the coefficient of the `up' $z$ state and the bottom refers to the coefficient of the `down' $z$ state. Given this, the basis states are:
+
+            $$\ket{+}=\left( \begin{matrix} 1\\ 0\end{matrix} \right)\quad\text{ and }\quad\ket{-}=\left( \begin{matrix} 0\\ 1\end{matrix} \right)$$
+
+          \item A general state may be written as:
+
+            $$\ket{\psi}=\left( \begin{matrix} \bra{+}\ket{\psi}\\ \bra{-}\ket{\psi}\end{matrix} \right)$$
+
+          \item For Hilbert Spaces whose dimensions are greater than 2, the matrix notation is generally more convenient
+
+        \end{itemize}
+
+      \item Repeating the earlier analysis but for the $y$ state, we get:
+
+        $$\ket{\pm}_y=\frac{1}{\sqrt{2}}(\ket{+}\pm i\ket{-})$$
+
+      \item In matrix notation this is equivalent to:
+
+        $$\ket{\pm}_y=\left( \begin{matrix} 1\\ \pm i\end{matrix} \right)$$
+
+    \end{itemize}
+
+  \item General Quantum States
+
+    \begin{itemize}
+
+      \item Suppose we have an $N$-dimensional Hilbert Space with possible outcomes $\ket{a_1}$, $\ket{a_2}$,\ldots, $\ket{a_N}$
+
+      \item We can then form the relation:
+
+        $$\bra{a_i}\ket{a_j}=\delta_{ij}\quad\text{ orthonormality}$$
+
+        \begin{itemize}
+
+          \item With the Kroenecker Delta function being:
+
+            $$\delta_{ij}=\left\{ \begin{array}{ll} 0,& i\neq j\\1,&i=j\end{array}$$
+
+        \end{itemize}
+
+      \item We can determine completeness using:
+
+        $$\ket{\psi}=\sum_{i=1}^{N} (\bra{a_i}\ket{\psi})\ket{a_i}$$
+        $$=\sum_{i=1}^{N} \ket{\psi}(\braket{a_i})$$
+        $$=\ket{\psi}$$
+
+          \begin{itemize}
+
+            \item Here we see the identity matrix
+
+          \end{itemize}
+
+    \end{itemize}
+
+  \item Postulates of Quantum Mechanics
+
+    \begin{itemize}
+
+      \item These can not be proven, but have been successfully tested in many experiments
+
+    \end{itemize}
+
+    \begin{enumerate}
+
+      \item The state of a quantum system, including all of the information you can know about it, is represented by the $\ket{\psi}$
+
+      \item A physical observable is represented mathematically by an operator $A$ that acts on kets
+
+      \item The only possible result of a measurement of an observable is one of the eigenvalues of the corresponding operator $A$
+
+      \item The probability of obtaining the eigenvalue $a_n$ in the measurement of the observable, $A$, on the system in the state $\ket{\psi}$ is given by:
+
+        $$P_{a_n}=|\bra{a_n}\ket{\psi}|^2$$
+
+        \begin{itemize}
+
+          \item Where $i\ket{a_n}$ is the normalized eigenvector of $A$ corresponding to the eigenvalue $a_n$
+
+        \end{itemize}
+
+      \item After a measurement of $A$ that yields the result $a_n$, the quantum system is in a new state that is the normalized projection of the original ket onto onto the ket (or kets) corresponding to the result of the measurement
+
+        $$\ket{\psi\prime}=\frac{P_n\ket{\psi}}{\sqrt{\bra{\psi | P_n}\ket{\psi}}}$$
+
+      \item The time-evolution of a quantum system is determined by the Hamiltonian or total energy equation $H(t)$ through the Schr\"odinger equation:
+
+        $$i\hbar\frac{d}{dt}\ket{\psi(t)}=H(t)\ket{\psi(t)}$$
+
+    \end{enumerate}
 
 \end{itemize}
 
