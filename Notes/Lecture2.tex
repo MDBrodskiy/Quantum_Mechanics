@@ -1,0 +1,180 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Quantum Mechanics
+% Professor: G. Fiete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Lecture 2}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: G. Fiete}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Predictions for experiment: what are the possible results of the measurement of spin projected onto an arbitrary direction, $\hat{n}$, and what are the predicted probabilities?
+
+  \item An operator is a mathematical object that acts on a ket and transforms it into a new ket:
+
+    $$A\ket{\psi}=\ket{\phi}$$
+
+  \item A ket that is not changed by the operator except to be multiplied by a constant is an eigenvector (below, $a$ is an eigenvalue):
+
+    $$A\ket{\psi}=a\ket{\psi}$$
+
+  \item A physical observable is represented mathematically by an operator, $A$, that acts on kets
+
+  \item The only possible result of a measurement of an observable is one of the eigenvalues, $a_n$, of the corresponding operator, $A$. Thus, the equatiion below is an eigenvalue equation:
+
+    $$A\ket{\psi}=a\ket{\psi}$$
+
+    \begin{itemize}
+
+      \item We have observed such an equation already:
+
+        $$S_z\ket{+}=\frac{\hbar}{2}\ket{+}$$
+        $$S_z\ket{-}=\frac{-\hbar}{2}\ket{-}$$
+
+      \item Since we had the matrix representations of the up and down states, there must also be one for the operator $S_z$:
+
+        $$\ket{+}=\left( \begin{matrix} 0\\ 1\end{matrix} \right)\quad\text{ and }\quad\ket{-}=\left( \begin{matrix} 0\\ 1\end{matrix} \right)$$
+        $$S_z=\left( \begin{matrix} a & b\\ c & d\end{matrix} \right)$$
+
+      \item From this, we get:
+
+        $$S_z\ket{+}\Rightarrow\left( \begin{matrix} a & b\\c & d\end{matrix} \right)\left( \begin{matrix} 1\\ 0\end{matrix} \right)=\left( \begin{matrix}a\\c\end{matrix} \right)=\frac{\hbar}{2}\left( \begin{matrix} 1\\ 0 \end{matrix}\right)$$
+        $$S_z\ket{-}\Rightarrow\left( \begin{matrix} a & b\\c & d\end{matrix} \right)\left( \begin{matrix} 0\\ 1\end{matrix} \right)=\left( \begin{matrix}b\\d\end{matrix} \right)=\frac{-\hbar}{2}\left( \begin{matrix} 0\\ 1 \end{matrix}\right)$$
+
+        \item We can thus conclude:
+
+          $$S_z=\frac{\hbar}{2}\left( \begin{matrix} 1 & 0\\ 0 & -1\end{matrix}  \right)$$
+
+        \item We can observe that an operator is always diagonal in its own basis; eigenvectors are unit vectors in their own basis
+
+    \end{itemize}
+
+  \item Matrix Representation of Operators
+
+    \begin{itemize}
+
+      \item A general operator may be expressed as:
+
+        $$A=\left( \begin{matrix} A_{11} & A_{12} & A_{13} & \cdots\\ A_{21} & A_{22} & A_{23} & \cdots\\ A_{31} & A_{32} & A_{33} & \cdots\\ \vdots & \vdots & \vdots & \ddots \end{matrix} \right)$$
+
+      \item This refers to:
+
+        $$A_{ij}=\bra{i | A}\ket{j}$$
+
+      \item The action on a general ket is:
+
+        $$A\ket{\psi}=\left( \begin{matrix} A_{11} & A_{12} & A_{13} & \cdots\\ A_{21} & A_{22} & A_{23} & \cdots\\ A_{31} & A_{32} & A_{33} & \cdots\\ \vdots & \vdots & \vdots & \ddots \end{matrix} \right)\left( \begin{matrix} c_1\\c_2\\c_3\\\vdots\end{matrix} \right)=\left( \begin{matrix} A_{11}c_1+A_{12}c_2+A_{13}c_3+\cdots\\A_{21}c_1+A_{22}c_2+A_{23}c_3+\cdots\\A_{31}c_1+A_{32}c_2+A_{33}c_3+\cdots\\\vdots\end{matrix} \right)$$
+
+      \item If we can write the new ket, we get:
+
+        $$\ket{\phi}=A\ket{\psi}=\sum_i b_i\ket{i}=\sum_i\sum_j A_{ij}c_j$$
+
+    \end{itemize}
+
+  \item Diagonalization of Operators
+
+    \begin{itemize}
+
+      \item Generally, one knows the matrix representation of an operator but wishes to know the possible results of a measurement
+
+      \item The eigenvalue equation:
+
+        $$A\ket{a_n}=a_n\ket{a_n}$$
+
+      \item which in the two-dimensional Hilbert space is:
+
+        $$\left( \begin{matrix} A_{11} & A_{12}\\A_{21} & A_{22}\end{matrix} \right)\left( \begin{matrix} c_1\\c_2\end{matrix} \right)=a_n\left( \begin{matrix} c_1\\c_2\end{matrix} \right)$$
+
+      \item where $c_1,c_2$ are unknown coefficients of $\ket{a_n}$
+
+      \item We can get the following equations:
+
+        $$\begin{matrix} (A_{11}-a_n)c_1+A_{12}c_2=0\\ A_{21}c_1+(A_{22}-a_n)c_2=0\end{matrix}$$
+
+        \begin{itemize}
+
+          \item This has solutions for unknowns $c_1$ and $c_2$ only when the determinant of the coefficients vanishes:
+
+            $$\Big|\begin{matrix} A_{11}-a_n & A_{12}\\ A_{21} & A_{22}-a_n\end{matrix}\Big|=0$$
+
+          \item This can be written in terms of the identity matrix as:
+
+            $$\det(A-\lambda\mathbb{1})=0$$
+
+            \begin{itemize}
+
+              \item Where:
+
+                $$\mathbb{1}=\left( \begin{matrix} 1 & 0\\ 0 & 1\end{matrix} \right)$$
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Matrix Representation Summary:
+
+    \begin{itemize}
+
+      \item We can write our observables as:
+
+        $$S_x=\frac{\hbar}{2}\left(0 & 1\\ 1 & 0 \right)$$
+        $$S_y=\frac{\hbar}{2}\left(0 & -i\\ i & 0 \right)$$
+        $$S_x=\frac{\hbar}{2}\left(1 & 0\\ 0 & -1 \right)$$
+
+      \item And we can write our kets as:
+
+        $$\ket{\pm}_x=\frac{1}{\sqrt{2}}\left( \begin{matrix}1\\\pm1\end{matrix} \right)$$
+        $$\ket{\pm}_y=\frac{1}{\sqrt{2}}\left( \begin{matrix}1\\\pm i\end{matrix} \right)$$
+
+    \end{itemize}
+
+  \item Spin Component in a General Direction
+
+    \begin{itemize}
+
+      \item In Cartesian, the unit vector $\hat{n}$ is:
+
+        $$\hat{n}=\sin(\theta)\cos(\phi)\hat{i}+\sin(\theta)\sin(\phi)\hat{j}+\cos(\theta)\hat{k}$$
+
+      \item The spin components along this direction are found by projection of spin onto this vector:
+
+        $$\vec{S}\cdot\hat{n}=S_x\sin(\theta)\cos(\phi)+S_y\sin(\theta)\sin(\phi)+S_z\cos(\theta)$$
+
+        \begin{itemize}
+
+          \item This is equivalent to:
+
+            $$\frac{\hbar}{2}\left( \begin{matrix} \cos(\theta) & \sin(\theta)e^{-i\phi}\\ \sin(\theta)e^{i\phi} & -\cos(\theta)\end{matrix}\right)$$
+
+        \end{itemize}
+
+      \item Following the diagonalization procedure, the eigenvalues are $\pm\hbar/2$ with eigenvalues:
+
+        $$\ket{+}_n=\cos\left( \frac{\theta}{2} \right)\ket{+}+\sin\left( \frac{\theta}{2} \right)e^{i\phi}\ket{-}$$
+        $$\ket{-}_n=\sin\left( \frac{\theta}{2} \right)\ket{+}-\cos\left( \frac{\theta}{2} \right)e^{i\phi}\ket{-}$$
+
+      \item This can represent any possible ket in a spin-1/2 system if one allows for all possible angles:
+
+        $$0\leq\theta <\pi\quad\text{ and }\quad0\leq\phi< 2\pi$$
+
+      \item Using the above, we can find the probability of a cascade of analyzers with the $\hat{n}$ direction and then $x$ direction gives us:
+
+        $$P_{+x}=|\,_x\braket{+}_n|^2=\frac{1}{2}[1+\sin(\theta)\cos(\phi)]$$
+        $$P_{-x}=|\,_x\bra{-}\ket{+}_n|^2=\frac{1}{2}[1-\sin(\theta)\cos(\phi)]$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
