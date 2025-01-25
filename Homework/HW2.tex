@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Quantum Mechanics
+% Professor: G. Fiete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 2}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: G. Fiete}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item We may begin diagonalizing the matrix by writing:
+
+    $$|S_x-\lambda \mathbb{1}|=0$$
+
+    We expand this to:
+
+    $$\Big|\left( \begin{matrix} -\lambda & \hbar/2\\ \hbar/2 & -\lambda\end{matrix} \right)\Big|=0$$
+
+    We may write the determinant of the matrix as:
+
+    $$\lambda^2-\frac{\hbar^2}{4}=0$$
+
+    This gives us the eigenvalues as:
+
+    $$\boxed{\lambda=\pm\frac{\hbar}{2}}$$
+
+    We can then find the eigenvectors as:
+
+    $$\left( \begin{matrix} -\lambda & \hbar/2\\ \hbar/2 & -\lambda \end{matrix} \right)\left( \begin{matrix} x_1\\ x_2\end{matrix} \right)=0$$
+
+    We matrix multiply to get:
+
+    $$\left( \begin{matrix} -\lambda x_1 + (\hbar x_2)/2\\ (\hbar x_1)/2-\lambda x_2\end{matrix} \right)=0$$
+
+    We can solve this system of equations to get:
+
+    $$x_1=\frac{\hbar x_2}{2\lambda}\quad\text{ and }\quad x_2=\frac{\hbar x_1}{2\lambda}$$
+
+    Plugging in our eigenvalues from earlier, we find solution points to be:
+
+    $$x_1=\pm x_2$$
+
+    Thus, since we want normalized eigenvectors, we may write this as:
+
+    $$\boxed{x_{\pm}=\frac{1}{\sqrt{2}}\left( \begin{matrix} 1\\\pm1\end{matrix} \right)}$$
+
+  \item Similar to problem (1), we may begin by writing:
+
+    $$|A-\lambda\mathbb{1}|=0$$
+
+    This gives us:
+
+    $$\Big|\left( \begin{matrix} 1-\lambda & 0 & 0\\ 0 & -(\lambda+.25) & .5\\ 0 & .5 & -(\lambda+.25)\end{matrix} \right)\Big|=0$$
+
+    We take the determinant to find:
+
+    $$(1-\lambda)\left([\lambda+.25]^2-.25\right)=0$$
+    $$(1-\lambda)\left(\lambda^2+.5\lambda-.375\right)=0$$
+
+    We see that one solution is $\lambda=1$. We continue to solve for the other two by using the quadratic formula:
+
+    $$\lambda=\frac{-.5\pm\sqrt{.25-4(1)(-.375)}}{2}$$
+    $$\lambda=\frac{-1\pm2\sqrt{1}}{4}$$
+    $$\lambda=1/4,-3/4$$
+
+    Thus, we see the eigenvalues are:
+
+    $$\boxed{\lambda=1,1/4,-3/4}$$
+
+    We then continue to find the eigenvectors:
+
+    $$\left( \begin{matrix} 1-\lambda & 0 & 0\\ 0 & -(\lambda+.25) & .5\\ 0 & .5 & -(\lambda+.25)\end{matrix} \right)\left( \begin{matrix}x_1\\x_2\\x_3\end{matrix} \right)=0$$
+
+    Carrying out the matrix multiplication gives us:
+
+    $$\left( \begin{matrix} (1-\lambda)x_1\\ -x_2(\lambda+.25)+.5x_3\\ .5x_2-x_3(\lambda+.25)\end{matrix} \right)=0$$
+
+
+    Plugging in our solutions for $\lambda$, we see that the possible combinations of solutions become:
+
+    $$x_1=1\quad\text{ and }\quad x_2,x_3=0\quad\text{ OR }\quad x_1=0\quad\text{ and }\quad x_2=\pm x_3$$
+
+    Thus, we can get normalized eigenvector solutions as:
+
+    $$\boxed{x_{A}=\left( \begin{matrix} 1\\0\\0\end{matrix} \right),\frac{1}{\sqrt{2}}\left( \begin{matrix}0 \\1\\1\end{matrix}\right),\frac{1}{\sqrt{2}}\left( \begin{matrix} 0\\-1\\1\end{matrix} \right) \right)}$$
+
+  \item We know the matrix representations of each orientation to be:
+
+    $$S_x=\frac{\hbar}{2}\left( \begin{matrix} 0 & 1\\ 1 & 0\end{matrix} \right)\quad\text{ and }\quad S_y=\frac{\hbar}{2}\left( \begin{matrix} 0 & -i\\i & 0\end{matrix} \right)$$
+
+    We can thus write the given expression as:
+
+    $$\frac{\hbar}{2}\left( \begin{matrix} 0 & 1\\ 1 & 0\end{matrix} \right)\frac{\hbar}{2}\left( \begin{matrix} 0 & -i\\i & 0\end{matrix} \right)-\frac{\hbar}{2}\left( \begin{matrix} 0 & -i\\i & 0\end{matrix} \right)\frac{\hbar}{2}\left( \begin{matrix} 0 & 1\\ 1 & 0\end{matrix} \right)$$
+
+    Let us remove the multiple of $\hbar^2/4$ for now to simplify calculations. This gives us:
+
+    $$\left( \begin{matrix} 0 & 1\\ 1 & 0\end{matrix} \right)\left( \begin{matrix} 0 & -i\\i & 0\end{matrix} \right)-\left( \begin{matrix} 0 & -i\\i & 0\end{matrix} \right)\left( \begin{matrix} 0 & 1\\ 1 & 0\end{matrix} \right)$$
+
+    Carrying out matrix multiplication, we get:
+
+    $$\left( \begin{matrix} i & 0\\ 0 & -i\end{matrix} \right)-\left( \begin{matrix} -i & 0\\ 0 & i\end{matrix} \right)$$
+    $$\left( \begin{matrix} 2i & 0\\ 0 & -2i\end{matrix} \right) \right)$$
+
+    We return the $\hbar$ factor to get:
+
+    $$S_xS_y-S_yS_x=\frac{i\hbar^2}{2}\left( \begin{matrix} 1 & 0\\ 0 & -1\end{matrix} \right)$$
+
+    We know that $S_z$ can be represented as:
+
+    $$S_z=\frac{\hbar}{2}\left( \begin{matrix} 1 & 0\\ 0 & -1\end{matrix} \right)$$
+
+    We multiply by $i\hbar$ to get:
+
+    $$i\hbar S_z=\frac{i\hbar^2}{2}\left( \begin{matrix} 1 & 0\\ 0 & -1\end{matrix} \right)$$
+
+    We can then conclude:
+
+    $$\boxed{\therefore S_xS_y-S_yS_x=i\hbar S_z}$$
+
+\end{enumerate}
+
+\end{document}
+
