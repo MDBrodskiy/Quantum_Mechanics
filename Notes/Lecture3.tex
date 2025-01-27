@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Quantum Mechanics
+% Professor: G. Fiete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Lecture 3}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: G. Fiete}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Hermitian Operators
+
+    \begin{itemize}
+
+      \item So far, we have only considered operators acting on kets:
+
+        $$\ket{\phi}=A\ket{\psi}$$
+
+      \item If the operator acts on a bra it must act to the left:
+
+        $$\bra{\epsilon}=\bra{\psi}A$$
+
+      \item However, the bra, $\bra{\epsilon}$, is \underline{not} the bra that corresponds to the ket, $\ket{\phi}=A\ket{\psi}$
+
+      \item The bra $\bra{\phi}$ is found by defining a new operator $A^+$ that obeys:
+
+        $$\bra{\phi}=\bra{\psi}A^{+}$$
+
+        \begin{itemize}
+
+          \item $A^{+}$ is called the Hermitian adjoint of $A$. Consider the inner product:
+
+            $$\bra{\phi}\ket{\beta}=\bra{\beta}\ket{\phi}^*$$
+            $$\bra{\psi|A^{+}}\ket{\beta}=(\bra{\beta|A}\ket{\psi})^*$$
+
+          \item This relates the matrix elements of $A$ and $A^{+}$
+            
+          \item Therefore, $A^{+}$ is found by transposing and complex conjugating the matrix representing $A$
+
+        \end{itemize}
+
+      \item An operator, $A$, is Hermitian if it is equal to its Hermitian adjoint, $A^{+}$
+
+      \item If an operator is Hermitian, then its bra, $\bra{\psi}A$ is equal to the bra $\bra{\phi}$ that corresponds to the ket $\ket{\phi}=A\ket{\psi}$
+
+        \begin{itemize}
+
+          \item In quantum mechanics, all operators that correspond to physical observables are Hermitian
+
+        \end{itemize}
+
+      \item Hermitian matrices have real eigenvalues, which ensures results of measurements are always real-values
+
+      \item The eigenvectors of Hermitian matrices comprise a complete set of basis states, which ensures the eigenvectors of any observable are a valid basis
+
+    \end{itemize}
+
+  \item Projection Operators
+
+    \begin{itemize}
+
+      \item Recall for a spin-1/2 system we had the identity relation:
+
+        $$\ket{+}\bra{+}+\ket{-}\bra{-}=\mathbb{1}$$
+
+      \item We can express this in matrix notation as:
+
+        $$\left( \begin{matrix}1\\0\end{matrix} \right)(1\quad 0)+\left( \begin{matrix}0\\1\end{matrix} \right)(0\quad 1)=\left( \begin{matrix}1 & 0\\0 & 1\end{matrix} \right)$$
+
+      \item This gives us the 2x2 identity matrix
+
+      \item The individual operators, $\ket{+}\bra{+}$ and $\ket{-}\bra{-}$, are called projection operators:
+
+        $$P_+=\ket{+}\bra{+}=\left( \begin{matrix}1&0\\0&0\end{matrix} \right)$$
+        $$P_-=\ket{-}\bra{-}=\left( \begin{matrix}0&0\\0&1\end{matrix} \right)$$
+
+      \item Thus, for a general state, we may write $P_++P_-=\mathbb{1}$
+
+      \item From here, we may write:
+
+        $$P_+\ket{\psi}=\ket{+}\bra{+}\ket{\psi}=(\bra{+}\ket{\psi})\ket{+}$$
+        $$P_-\ket{\psi}=\ket{-}\bra{-}\ket{\psi}=(\bra{-}\ket{\psi})\ket{-}$$
+
+      \item The effect of the projection operator on a given state is to produce a new, normalized state
+
+        $$\ket{\psi'}=P_+\ket{\psi}$$
+
+      \item The projection postulate thus becomes:
+
+        $$\ket{\psi'}=\frac{P_+\ket{\psi}}{\sqrt{\bra{\psi|P_+}\ket{\psi}}}=\ket{+}$$
+        
+      \item This indicates a ``collapse'' of the quantum state vector
+
+    \end{itemize}
+
+  \item Measurement
+
+    \begin{itemize}
+
+      \item In quantum mechanics, one must perform multiple identical measurements on identically prepared systems to infer the probabilities of outcomes
+
+      \item For example, if one performs $N$ measurements of the projections of $\ket{\psi}$ and obtains $+\hbar/2$ $N_+$ times, then:
+
+        $$\lim_{N\to\infty}\frac{N_+}{N}=|\bra{+}\ket{\psi}|^2$$
+
+      \item It is useful to characterize statistical data sets by their mean and standard deviation
+
+        $$<S_z>=\frac{\hbar}{2}P_++\left(-\frac{\hbar}{2}\right)P_-=\bra{\psi|S_z}\ket{\psi}$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
