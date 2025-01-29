@@ -113,7 +113,207 @@
 
       \item It is useful to characterize statistical data sets by their mean and standard deviation
 
-        $$<S_z>=\frac{\hbar}{2}P_++\left(-\frac{\hbar}{2}\right)P_-=\bra{\psi|S_z}\ket{\psi}$$
+        $$<S_z>=\frac{\hbar}{2}P_++\left(-\frac{\hbar}{2}\right)P_-=\bra{\psi|S_z}\ket{\psi}=\sum_{n}a_nP_{a_n}$$
+
+        \begin{itemize}
+
+          \item We may observe that this is the sum of the eigenvalues multiplied by the probability of getting said eigenvalue
+
+          \item For the spin-1/2 system with $\ket{+}$ we get:
+
+            $$<S_z>=\bra{+|S_z}\ket{+}=\bra{+|\hbar/2}\ket{+}=\frac{\hbar}{2}\braket{+}=\frac{\hbar}{2}$$
+
+          \item Similarly, we may apply $\ket{+}_x$ to observe:
+
+            $$<S_z>=\,_x\bra{+|S_z}\ket{+}_x=\,_x\bra{+|\hbar/2}\ket{+}_x=\frac{\hbar}{4}(1-1)=0$$
+
+        \end{itemize}
+
+      \item It is common to characterize the standard deviation by the root-mean-square:
+
+        $$\Delta A=\sqrt{<(A-<A>)^2>}=\sqrt{<A^2>-<A>^2}$$
+
+        \begin{itemize}
+
+          \item From the above, it is important to note that in the general case:
+
+            $$<A^2>\neq <A>^2$$
+
+        \end{itemize}
+
+      \item The square of an operator acts twice on the state:
+
+        $$A^2\ket{\psi}=A(A\ket{\psi})$$
+
+        \begin{itemize}
+
+          \item Similarly, if we consider $S_z$, we may write:
+
+            $$<S_z^2>=\bra{+|S_z^2}\ket{+}=\bra{+|(\hbar/2)^2}\ket{+}=\frac{\hbar^2}{4}$$
+
+          \item Thus, we may write:
+
+            $$\Delta S_z=0$$
+
+          \item Now, we check a different orientation:
+
+            $$_x\bra{+|S_z^2}\ket{+}_x=\frac{\hbar^2}{4}$$
+
+          \item Thus, we may see:
+
+            $$\Delta_xS_z=\frac{h}{2}$$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Commuting Observables
+
+    \begin{itemize}
+
+      \item Two incompatible observables may be identified with a commutator:
+
+        $$[A,B]=AB-BA$$
+
+      \item If $[A,B]=0$, operators (observables) are said to commute and are compatible
+
+      \item Assuming $[A,B]=0$, then:
+
+        $$AB=BA$$
+
+        \begin{itemize}
+
+          \item Let $\ket{a}$ be an eigenstate of $A$ with eigenvalue $a$:
+
+            $$A\ket{a}=a\ket{a}$$
+
+          \item Then we can say:
+
+            $$BA\ket{a}=aB\ket{a}$$
+
+          \item This can be expanded:
+
+            $$AB\ket{a}=A(B\ket{a})=a\ket{a'}$$
+
+            \begin{itemize}
+
+              \item Here, we make $B\ket{a}$ an eigenstate of $A$ with eigenvalue $a$
+
+            \end{itemize}
+
+          \item Assuming each eigenvalue has a unique eigenstate, then $B\ket{a}$ must be a scalar multiple of $\ket{a}$
+
+            $$B\ket{a}=b\ket{a}$$
+
+          \item Thus, we conclude:
+
+            $$\text{If }[A,B]=0,\text{ }A\text{ and }B\text{ have simultaneous sets of eigenstates}$$
+
+          \item Conversely, if two operators do not commute, they are incompatible and can not be known simultaneously, like $S_z$ and $S_x$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Uncertainty Principle
+
+    \begin{itemize}
+
+      \item There is an intimate connection between the commutator of two observables and the possible precision of measurements of each:
+
+        $$\Delta A\Delta B\geq \frac{1}{2}|<[A,B]>|$$
+
+      \item Applying to Stern-Gerlach, we may write:
+
+        $$\Delta S_x\Delta S_y\geq \frac{1}{2}|<[S_x,S_y]>|$$
+        $$\Delta S_x\Delta S_y\geq \frac{\hbar}{2}|<S_z>|$$
+
+        \begin{itemize}
+
+          \item Applying this to $\ket{+}$, we find:
+
+            $$\Delta S_x\Delta S_y\geq \left( \frac{\hbar}{2} \right)^2$$
+
+            \begin{itemize}
+
+              \item This implies that the individual components are both non-zero
+
+              \item Therefore, we can not know spin components of either component absolutely
+
+              \item As a result, one can not say the spin points in a given direction
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item The $\vec{S}$ Operation
+
+    \begin{itemize}
+
+      \item Let us begin by writing:
+
+        $$\vec{S}^2=S_x^2+S_y^2+S_z^2$$
+
+      \item It points in no direction in space. We can calculate using matrix notation:
+
+        $$\vec{S}^2=\left( \frac{\hbar}{2} \right)^2\left[\left( \begin{matrix} 0 & 1\\1 & 0\end{matrix} \right)\left( \begin{matrix} 0 & 1\\1 & 0\end{matrix} \right)+\left( \begin{matrix} 0 & -i\\i & 0\end{matrix} \right)\left( \begin{matrix} 0 & -i\\i & 0\end{matrix} \right)+\left( \begin{matrix} 1 & 0\\0 & -1\end{matrix} \right)\left( \begin{matrix} 1 & 0\\0 & -1\end{matrix} \right)\right]$$
+        $$\vec{S}^2=\left( \frac{\hbar}{2} \right)^2\left[ \mathbb{1}+\mathbb{1}+\mathbb{1} \right]$$
+        $$\vec{S}^2=\frac{3\hbar^2}{4}\mathbb{1}$$
+
+      \item For any state $\ket{\psi}$ in the Hilbert space $S=1/2$:
+
+        $$\vec{S}^2\ket{\psi}=\frac{3}{4}\hbar^2\ket{\psi}$$
+
+      \item So, we may conclude:
+
+        $$<\vec{S}^2>=\frac{3}{4}\hbar^2$$
+
+      \item This would imply the ``length'' of the spin vector is:
+
+        $$|\vec{S}|=\sqrt{<\vec{S}^2>}=\sqrt{3}(\hbar/2)$$
+
+      \item Thus, this value is greater than the measured component, $\hbar/2$, implying that the spin vector is never fully aligned with any axis
+
+    \end{itemize}
+
+  \item Spin-1 Systems
+
+    \begin{itemize}
+
+      \item The Stern-Gerlach experiment produces 3 beams corresponding to $z$-axis projections $+\hbar$, $0$, and $-\hbar$:
+
+        $$\ket{1},\ket{0},\ket{-1}\Longrightarrow \left\{\begin{array}{ll} S_z\ket{1}&=\hbar\ket{1}\\S_z\ket{0}&=0\hbar\ket{0}\\S_z\ket{-1}&= -\hbar\ket{-1}\end{array}$$
+
+        \item Recall eigenvectors are unit vectors in their own basis and an operator is always diagonal in its own basis. This gives us:
+
+          $$\ket{1}=\left( \begin{matrix}1\\0\\0\end{matrix} \right)\quad\ket{0}=\left( \begin{matrix}0\\1\\0\end{matrix} \right)\quad\ket{-1}=\left( \begin{matrix}0\\0\\1\end{matrix} \right)$$
+
+          \begin{itemize}
+
+            \item This then gives us:
+
+              $$S_x=\hbar\left(\begin{matrix} 1 & 0 & 0\\0 & 0 & 0\\ 0 & 0 & -1\end{matrix}  \right)$$
+
+          \end{itemize}
+
+        \item We can write the $x$ orientation as:
+
+          $$\ket{1}_x=\frac{1}{2}\ket{1}+\frac{1}{\sqrt{2}}\ket{0}+\frac{1}{2}\ket{-1}$$
+          $$\ket{0}_x=\frac{1}{\sqrt{2}}\ket{1}-\frac{1}{\sqrt{2}}\ket{-1}$$
+          $$\ket{-1}_x=\frac{1}{2}\ket{1}-\frac{1}{\sqrt{2}}\ket{0}+\frac{1}{2}\ket{-1}$$
+
+        \item We then do the same for the $y$ orientation:
+
+          $$\ket{1}_y=\frac{1}{2}\ket{1}+\frac{i}{\sqrt{2}}\ket{0}-\frac{1}{2}\ket{-1}$$
+          $$\ket{0}_x=\frac{1}{\sqrt{2}}\ket{1}+\frac{1}{\sqrt{2}}\ket{-1}$$
+          $$\ket{-1}_x=\frac{1}{2}\ket{1}-\frac{i}{\sqrt{2}}\ket{0}-\frac{1}{2}\ket{-1}$$
+
+        \item The operators can be written as:
+
+          $$S_x=\frac{\hbar}{\sqrt{2}}\left( \begin{matrix} 0 & 1 & 0\\ 1 & 0 & 1\\ 0 & 1 & 0\end{matrix} \right)$$
+          $$S_y=\frac{\hbar}{\sqrt{2}}\left( \begin{matrix} 0 & -i & 0\\ i & 0 & -i\\ 0 & i & 0\end{matrix} \right)$$
 
     \end{itemize}
 
