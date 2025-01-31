@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Quantum Mechanics
+% Professor: G. Fiete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 3}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: G. Fiete}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item We know that, for a spin-1 system, the spin can be:
+
+        $$\boxed{S_z=\hbar,0,-\hbar}$$
+
+        Given the quantum state in the problem, we can find the probabilities of each as:
+
+        $$P_1=\left( \frac{1}{\sqrt{30}} \right)^2$$
+        $$P_0=\left( \frac{2}{\sqrt{30}} \right)^2$$
+        $$P_{-1}=\left( \frac{|5i|}{\sqrt{30}} \right)^2$$
+
+        This gives us:
+
+        $$\boxed{\left\{\begin{array}{ll} P_1&= 1/30\\P_0&= 2/15\\P_{-1}&= 5/6\end{array}}$$
+
+          We can calculate the expectation value of $S_z$ by using:
+
+          $$\bra{\psi|S_z}\ket{\psi}$$
+
+          In matrix notation, this gives us:
+
+          $$<S_z>=\left[ \frac{\hbar}{30} \right](1\quad 2\quad -5i)\left( \begin{matrix} 1 & 0 & 0\\ 0 & 0 & 0\\ 0 & 0 & -1\end{matrix} \right)\left( \begin{matrix}1\\2\\5i\end{matrix} \right)$$
+
+          We proceed to evaluate:
+
+          $$<S_z>=\left[ \frac{\hbar}{30} \right](1\quad 0\quad 5i)\left( \begin{matrix}1\\2\\5i\end{matrix} \right)$$
+          $$<S_z>=\left[ \frac{\hbar}{30} \right](1-(25))$$
+          $$\boxed{<S_z>= -\frac{24\hbar}{30}=-\frac{12\hbar}{15}}$$
+
+        \item Similar to the expectation value of $S_z$ in part (a), we apply the matrix notation of $S_x$ to write:
+
+          $$<S_x>=\left[ \frac{\hbar}{30\sqrt{2}} \right](1\quad 2\quad -5i)\left( \begin{matrix} 0 & 1 & 0\\ 1 & 0 & 1\\ 0 & 1 & 0\end{matrix} \right)\left( \begin{matrix}1\\2\\5i\end{matrix} \right)$$
+          $$<S_x>=\left[ \frac{\hbar}{30\sqrt{2}} \right](2\quad 1-5i\quad 2)\left( \begin{matrix}1\\2\\5i\end{matrix} \right)$$
+          $$<S_x>=\left[ \frac{\hbar}{30\sqrt{2}} \right](4+10i-10i)$$
+          $$\boxed{<S_x>= \frac{4\hbar}{30\sqrt{2}}=\frac{2\hbar}{15\sqrt{2}}}$$
+
+    \end{enumerate}
+
+  \item
+
+  \item
+
+    \begin{enumerate}
+
+      \item We know that $\hat{A}$ and $\hat{B}$ commute if $\hat{A}\hat{B}=\hat{B}\hat{A}$. Thus, we begin by calculating $\hat{A}\hat{B}$:
+
+        $$\hat{A}\hat{B}=\left( \begin{matrix} a_1 & 0 & 0\\ 0 & a_2 & 0\\ 0 & 0 & a_3\end{matrix} \right)\left( \begin{matrix} b_1 & 0 & 0\\ 0 & 0 & b_2\\ 0 & b_2 & 0\end{matrix} \right)$$
+
+        This gives us:
+
+        $$\hat{A}\hat{B}=\left( \begin{matrix} a_1b_1 & 0 & 0\\ 0 & 0 & a_2b_2\\ 0 & a_3b_2 & 0\end{matrix} \right)$$
+
+        Now, we calculate $\hat{B}\hat{A}$:
+
+        $$\hat{B}\hat{A}=\left( \begin{matrix} b_1 & 0 & 0\\ 0 & 0 & b_2\\ 0 & b_2 & 0\end{matrix} \right)\left( \begin{matrix} a_1 & 0 & 0\\ 0 & a_2 & 0\\ 0 & 0 & a_3\end{matrix} \right)$$
+
+        This gives us:
+
+        $$\hat{B}\hat{A}=\left( \begin{matrix} b_1a_1 & 0 & 0\\ 0 & 0 & b_2a_3\\ 0 & b_2a_2&0\end{matrix} \right)$$
+
+        We may see that $\hat{A}\hat{B}\neq\hat{B}\hat{A}$ and, therefore, the operators \underline{do not commute}
+
+      \item We begin working with $\hat{A}$:
+
+        $$|\hat{A}-\lambda\mathbb{1}|=0$$
+
+        This gives us:
+
+        $$(a_1-\lambda)(a_2-\lambda)(a_3-\lambda)=0$$
+
+        Thus, we see that, since this is a diagonal matrix, we get $\boxed{\lambda=a_1, a_2,\text{ and }a_3}$ as the eigenvalues. Thus, we may observe that the normalized eigenvectors are:
+
+        $$\boxed{\left\{ \left[ \begin{matrix} 1\\0\\0\end{matrix} \right], \left[ \begin{matrix}0\\1\\0\end{matrix} \right],\left[ \begin{matrix} 0\\0\\1\end{matrix} \right] \right\}}$$
+
+        We then proceed to do the same with $\hat{B}$:
+
+        $$\Big|\left[ \begin{matrix} b_1-\lambda & 0 & 0\\ 0 & -\lambda & b_2\\0 & b_2 & -\lambda\end{matrix} \right]\Big|=0$$
+
+        This gives us:
+
+        $$(b_1-\lambda)(\lambda^2-b_2^2)=0$$
+
+        We can thus see that the eigenvalues are:
+
+        $$\boxed{\lambda=b_1,\pm b_2}$$
+
+        From here, we can observe that the normalized eigenvectors become:
+
+        $$\boxed{\left[ \begin{matrix} 1 \\ 0 \\ 0 \end{matrix}\right],\frac{1}{\sqrt{2}}\left[ \begin{matrix} 0\\1\\1\end{matrix} \right],\frac{1}{\sqrt{2}}\left[ \begin{matrix}0\\-1\\1\end{matrix} \right]}$$
+
+      \item Let us assume that the basis eigenvectors are:
+
+        $$\ket{1}= \left[ \begin{matrix} 1\\0\\0\end{matrix} \right],\quad\ket{2}=\left[ \begin{matrix}0\\1\\0\end{matrix} \right],\ket{3}=\left[ \begin{matrix} 0\\0\\1\end{matrix} \right]$$
+
+        We calculate the measure of $\hat{B}$ by writing:
+
+        $$\hat{B}\ket{2}=\left( \begin{matrix} b_1 & 0 & 0\\ 0 & 0 & b_2\\ 0 & b_2 & 0\end{matrix} \right)\left( \begin{matrix}0\\1\\0\end{matrix} \right)$$
+        $$\hat{B}\ket{2}=\left( \begin{matrix}0\\0\\b_2\end{matrix} \right)$$
+
+        Rewriting this in terms of the basis vectors of $\hat{B}$, we may find:
+
+        $$\hat{B}\ket{2}=\frac{b_2}{2}\left(\left[ \begin{matrix} 0\\1\\1\end{matrix} \right]+\left[ \begin{matrix}0\\-1\\1\end{matrix} \right]  \right)$$
+        $$\boxed{\hat{B}\ket{2}=\frac{b_2}{\sqrt{2}}\left(\ket{B_2}+\ket{B_3}  \right)}$$
+
+        Since we may see that the two occur with equal probabilities, we may say that, for the operator $\hat{B}$, the probabilities are $P_{B_2}=P_{B_3}=.5$
+
+        On the other hand, we may find $a$ to be:
+
+        $$\hat{A}\left( \begin{matrix} 0\\0\\b_2\end{matrix} \right)=\left( \begin{matrix} a_1 & 0 & 0\\ 0 & a_2 & 0\\ 0 & 0 & a_3\end{matrix} \right)\left( \begin{matrix}0\\0\\b_2\end{matrix} \right)$$
+        $$\hat{A}\left( \begin{matrix} 0\\0\\b_2\end{matrix} \right)=\left( \begin{matrix} 0\\0\\b_2a_3\end{matrix}\right)$$
+
+        We may see that this is equivalent to an integer multiple of the eigenvector $\ket{A_3}$ of operator $\hat{A}$. Thus, we may find that:
+
+        $$\hat{A}\hat{B}\ket{2}=b_2a_3\ket{A_3}$$
+
+        And, therefore, \underline{the measurement produces $a_3$ with a probability of $1$}
+
+      \item Note that the result from part (a) indicates that we can not know the measurements of $A$ and $B$ at the same time with certainty. This is confirmed by the results from part (c), as we find that measuring $\hat{B}\ket{2}$ before $\hat{A}$ has no effect on the result of $\hat{A}$
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+
