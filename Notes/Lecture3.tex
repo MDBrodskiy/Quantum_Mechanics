@@ -317,6 +317,95 @@
 
     \end{itemize}
 
+  \item New Labels
+
+    \begin{itemize}
+
+      \item The allowed values of spin are $S=1/2,1,3/2,2,\cdots$
+
+      \item The number of beams exiting the Stern-Gerlach with such spin is $2S+1$ with a minimum value of $-\hbar S$ and a maximum value  $+\hbar S$
+
+      \item We label the state $\ket{S_m}$
+
+        $$\vec{S}\ket{S_m}=S(S+1)\hbar^2\ket{S_m}$$
+        $$S_z\ket{S_m}=m\hbar\ket{S_m}$$
+        $$[\vec{S}^2,S_z]=0$$
+
+        \begin{itemize}
+
+          \item Note, $S_m$ is the magnetic quantum number
+
+        \end{itemize}
+
+      \item Schr\"odinger Equation
+
+        \begin{itemize}
+
+          \item The time evolution of a quantum system, is determined by the Hamiltonian of the total energy operator $H(t)$ through the Schr\"odinger equation:
+
+            $$i\hbar\frac{d}{dt}\ket{\psi(t)}=H(t)\ket{\psi(t)}$$
+
+        \end{itemize}
+
+      \item The Energy Eigenvalue Equation
+
+        $$H\ket{E_n}=E_n\ket{E_n}$$
+
+        \begin{itemize}
+
+          \item Where $E_n$ represents the only allowed energies of the system
+
+          \item Since $H$ represents the energy, it is observable, Hermitian, and therefore, its eigenvalues form a complete basis
+
+          \item SInce $H$ is the only operator appearing in the Schr\"odinger equation, it is convenient to expand the state vectors in terms of the energy eigenstates:
+
+            $$\ket{\psi}=\sum_{n}\bra{n(t)}\ket{E_n}$$
+
+          \item Substituting the expansion into the Schr\"odinger equation gets us:
+
+            $$i\hbar\frac{d}{dt}\sum_n \bra{n(t)}\ket{E_n}=\sum_n\bra{n(t)E_n}\ket{E_n}$$
+            $$\frac{d C_k(t)}{dt}=- i\frac{E_k}{\hbar}C_k(t)$$
+
+          \item We see that a possible solution is:
+
+            $$C_k(t)=C_o(t)e^{-iE_k/\hbar}$$
+
+            \begin{itemize}
+
+              \item Each energy has the same form of the time dependence but a different exponent. At time $t=0$:
+
+                $$\ket{\psi(0)}=\sum_n\bra{n}\ket{E_n}$$
+
+              \item And the time evolution of a time-independent Hamiltonian is:
+
+                $$\ket{\psi(t)}=\sum_n C_ne^{-iE_nt/\hbar}\ket{E_n}$$
+
+                $$H\ket{E_n}=E_n\ket{E_n}$$
+
+              \item Note that the factor $e^{-iE_nt/\hbar}$ has the form $e^{-i\omega t}$ found in many areas of physics, such that:
+
+                $$\omega_n=\frac{E_n}{\hbar}\Rightarrow E_n=\hbar \omega_n$$
+
+              \item Energy eigenstates are called stationary states
+
+              \item If the system is in an energy eigenstate, it remains in that state
+
+            \end{itemize}
+
+          \item The Bohr Frequency
+
+            \begin{itemize}
+
+              \item The Bohr frequency may be found as:
+
+                $$\omega_{21}=\frac{E_2-E_1}{\hbar}$$
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
