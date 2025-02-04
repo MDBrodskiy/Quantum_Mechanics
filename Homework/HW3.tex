@@ -57,7 +57,46 @@
 
     \end{enumerate}
 
-  \item
+  \item We may begin by converting $\ket{\psi_f}$ into the $S_z$ basis to simply probability calculations. We know:
+
+    $$\ket{1}=\frac{1}{2}\left( \ket{1}+i\sqrt{2}\ket{0}-\ket{-1} \right)$$
+    $$\ket{0}=\frac{1}{\sqrt{2}}\left( \ket{1}+\ket{-1} \right)$$
+    $$\ket{-1}=\frac{1}{2}\left( \ket{1}-i\sqrt{2}\ket{0}-\ket{-1} \right)$$
+
+    Applying this to the given state function, we may find:
+
+    $$\ket{\psi_f}=\frac{1+i}{2\sqrt{7}}\left[ \ket{1}+i\sqrt{2}\ket{0}-\ket{-1}\right]+\frac{2}{\sqrt{14}}\left[\ket{1}+\ket{-1} \right]-\frac{i}{2\sqrt{7}}\left[ \ket{1}-i\sqrt{2}\ket{0}-\ket{-1}\right]$$
+
+    We distribute and simplify:
+
+    $$\ket{\psi_f}=\left[\frac{1+i}{2\sqrt{7}}+\frac{2}{\sqrt{14}}-\frac{i}{2\sqrt{7}}\right]\ket{1}+\left[\frac{i-1}{\sqrt{14}}-\frac{1}{\sqrt{14}}\right]\ket{0}+\left[-\frac{1+i}{2\sqrt{7}}+\frac{2}{\sqrt{14}}+\frac{i}{2\sqrt{7}}\right]\ket{-1}$$
+    $$\ket{\psi_f}=\left[\frac{1}{2\sqrt{7}}+\frac{\sqrt{2}}{\sqrt{7}}\right]\ket{1}+\left[\frac{i-2}{\sqrt{14}}\right]\ket{0}+\left[-\frac{1}{2\sqrt{7}}+\frac{\sqrt{2}}{\sqrt{7}}\right]\ket{-1}$$
+    $$\ket{\psi_f}=\left[\frac{1+2\sqrt{2}}{2\sqrt{7}}\right]\ket{1}+\left[\frac{i-2}{\sqrt{14}}\right]\ket{0}+\left[\frac{2\sqrt{2}-1}{2\sqrt{7}}\right]\ket{-1}$$
+
+    We know that the probability of a normalized state (like $\psi_i$) can be expressed as:
+
+    $$P=|\bra{\psi_f}\ket{\psi_i}|^2$$
+
+    We take the complex conjugate to get:
+
+    $$\bra{\psi_f}=\left[\frac{1+2\sqrt{2}}{2\sqrt{7}}\right]\ket{1}-\left[\frac{i+2}{\sqrt{14}}\right]\ket{0}+\left[\frac{2\sqrt{2}-1}{2\sqrt{7}}\right]\ket{-1}$$
+
+    We proceed to take the inner product of the two:
+
+    $$\bra{\psi_f}\ket{\psi_i}=\left[ \frac{1+2\sqrt{2}}{2\sqrt{7}} \right]\left[ \sqrt{\frac{1}{6}} \right]+\left[ \frac{i+2}{\sqrt{14}} \right]\left[ \sqrt{\frac{2}{6}} \right]+\left[ \frac{2\sqrt{2}-1}{2\sqrt{7}} \right]\left[ i\sqrt{\frac{3}{6}} \right]$$
+
+    We then simplify:
+
+    $$\bra{\psi_f}\ket{\psi_i}=\frac{1+2\sqrt{2}}{2\sqrt{42}}+\frac{i+2}{\sqrt{42}}+\left[ \frac{1}{\sqrt{7}}-\frac{1}{2\sqrt{14}} \right]i$$
+    
+    For ease of calculation, we may convert to decimal form:
+
+    $$\bra{\psi_f}\ket{\psi_i}=.604+.3986i$$
+
+    We can then find the probability as:
+
+    $$|\bra{\psi_f}\ket{\psi_i}|^2=.604^2+.3986^2$$
+    $$\boxed{P=.5237}$$
 
   \item
 
