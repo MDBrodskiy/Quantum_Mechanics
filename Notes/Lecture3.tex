@@ -357,7 +357,7 @@
 
           \item Since $H$ represents the energy, it is observable, Hermitian, and therefore, its eigenvalues form a complete basis
 
-          \item SInce $H$ is the only operator appearing in the Schr\"odinger equation, it is convenient to expand the state vectors in terms of the energy eigenstates:
+          \item Since $H$ is the only operator appearing in the Schr\"odinger equation, it is convenient to expand the state vectors in terms of the energy eigenstates:
 
             $$\ket{\psi}=\sum_{n}\bra{n(t)}\ket{E_n}$$
 
@@ -401,6 +401,100 @@
                 $$\omega_{21}=\frac{E_2-E_1}{\hbar}$$
 
             \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Spin Precession
+
+    \begin{itemize}
+
+      \item Time-evolution of $S=1/2$
+
+        $$\vec{\mu}=g\frac{q}{2m}\vec{S}$$
+
+        \begin{itemize}
+
+          \item For an electron:
+
+            $$\vec{\mu}=\frac{e}{m_e}\vec{S}$$
+
+        \end{itemize}
+
+      \item The Hamiltonian is:
+
+        $$H=-\vec{\mu}\cdot\vec{B}=\frac{e}{m_e}\vec{S}\cdot\vec{B}=\frac{eB_o}{m_e}S_z=\frac{\hbar\omega_o}{2}\left( \begin{matrix} 1 & 0\\ 0 &-1\end{matrix} \right)$$
+
+      \item We can find eigenstates:
+
+        $$H\ket{+}=\frac{\hbar}{2}\omega_o\ket{+}$$
+        $$H\ket{-}=-\frac{\hbar}{2}\omega_o\ket{-}$$
+
+      \item For a quantum state with initial state:
+
+        $$\ket{\psi(0)}=\ket{+}$$
+
+      \item We find time-evolution:
+
+        $$\ket{\psi(t)}=e^{-i\omega_o t/2}\ket{+}$$
+
+      \item Next, let us consider a more general state:
+
+        $$\ket{\psi(0)}=\ket{+}_n=\cos\left( \frac{\theta}{2} \right)\ket{+}+\sin\left( \frac{\theta}{2} \right)e^{i\phi}\ket{-}$$
+
+        \begin{itemize}
+
+          \item Time-dependence may be expressed as:
+
+            $$\ket{\psi(0)}=e^{-i\omega_ot/2}\cos\left( \frac{\theta}{2} \right)\ket{+}+e^{t_i\omega_ot/2}\sin\left( \frac{\theta}{2} \right)e^{i\phi}\ket{-}$$
+            $$\ket{\psi(0)}=e^{-i\omega_ot/2}\left[\cos\left( \frac{\theta}{2} \right)\ket{+}+\sin\left( \frac{\theta}{2} \right)e^{i(\omega_ot+\phi)}\ket{-}\right]$$
+
+        \end{itemize}
+
+      \item We may use the time-dependence to find the probability of being in the up state:
+
+        $$P_+=|\bra{+}\ket{\psi(t)}|^2=\cos^2(\theta/2)$$
+
+        \begin{itemize}
+
+          \item In this case, the probability is time independent since the $z$ component commutes with the Hamiltonian
+
+          \item The angle $\theta$ the spin vector $\hat{n}$ makes with the $z$-axis does not change
+
+        \end{itemize}
+
+      \item Similarly, we may find:
+
+        $$P_{+x}=|\,_x\bra{+}\ket{\psi(t)}|^2=\frac{1}{2}\left[ 1+\sin(\theta)\cos(\phi+\omega_o t) \right]$$
+
+        \begin{itemize}
+
+          \item We may see that this is time dependent since $H$ and $S_x$ do not commute
+
+        \end{itemize}
+
+      \item To see spin precession more clearly, we will compute the expectation values for each spin component
+
+        $$<S_z>=\bra{\psi(t)|S_z}\ket{\psi(t)}=\frac{\hbar}{2}\cos(\theta)$$
+        $$<S_y>=\bra{\psi(t)|S_y}\ket{\psi(t)}=\frac{\hbar}{2}\sin(\theta)\sin(\phi+\omega_o t)$$
+        $$<S_x>=\bra{\psi(t)|S_x}\ket{\psi(t)}=\frac{\hbar}{2}\sin(\theta)\cos(\phi+\omega_o t)$$
+
+        \begin{itemize}
+
+          \item As such, we see that $<S_x>$ and $<S_y>$ oscillate in time and $<\vec{S}>$ precesses around the magnetic field with the angular frequency $\omega_o$, which is known as the Larmor frequency and precession, respectively
+
+          \item The equivalence of the classical Larmor precession and the expectation value of the quantum spin vector is an example of Ehrenfest's theorem, which states that quantum expectation values obey classical laws
+
+        \end{itemize}
+
+      \item If we start a system in a spin $\ket{+}$ state and find the probability it has later evolved into a spin $\ket{-}$ state, we call this a spin flip
+
+        $$P_{+\to-}=|\bra{-}\ket{\psi(t)}|^2=\sin^2(\theta)\sin^2\left( \frac{E_+-E_-}{2\hbar}t \right)=\frac{\omega_1^2}{\omega_o^2+\omega_o^2}\sin^2\left( \frac{\sqrt{\omega_o^2+\omega_1^2}}{2}t \right)$$
+
+        \begin{itemize}
+
+          \item This is known as Rabi's formula
 
         \end{itemize}
 

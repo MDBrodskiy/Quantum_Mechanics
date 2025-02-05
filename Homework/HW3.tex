@@ -162,18 +162,26 @@
         $$\hat{B}\ket{2}=\frac{b_2}{2}\left(\left[ \begin{matrix} 0\\1\\1\end{matrix} \right]+\left[ \begin{matrix}0\\-1\\1\end{matrix} \right]  \right)$$
         $$\boxed{\hat{B}\ket{2}=\frac{b_2}{\sqrt{2}}\left(\ket{B_2}+\ket{B_3}  \right)}$$
 
-        Since we may see that the two occur with equal probabilities, we may say that, for the operator $\hat{B}$, the probabilities are $P_{B_2}=P_{B_3}=.5$
+        Since we may see that the two occur with equal probabilities, we may say that, for the operator $\hat{B}$, the probabilities are $P_{B_2}=P_{B_3}=.5$, while $P_{B_1}=0$ (where $B_1$ corresponds to $b_1$, $B_2$ to $b_2$ and $B_3$ to $-b_2$ eigenvalue solutions)
 
-        On the other hand, we may find $a$ to be:
+        On the other hand, we may find the probabilities of subsequently measuring $a$ (after $\ket{2}$) to be:
 
-        $$\hat{A}\left( \begin{matrix} 0\\0\\b_2\end{matrix} \right)=\left( \begin{matrix} a_1 & 0 & 0\\ 0 & a_2 & 0\\ 0 & 0 & a_3\end{matrix} \right)\left( \begin{matrix}0\\0\\b_2\end{matrix} \right)$$
-        $$\hat{A}\left( \begin{matrix} 0\\0\\b_2\end{matrix} \right)=\left( \begin{matrix} 0\\0\\b_2a_3\end{matrix}\right)$$
+        $$P_{\pm b_2,a_1}=|\bra{a_1}\ket{B_2}|^2\to |\bra{1}\frac{1}{\sqrt{2}}(\ket{2}\pm\ket{3})|^2$$
+        $$P_{\pm b_2,a_2}=|\bra{a_2}\ket{B_2}|^2\to |\bra{2}\frac{1}{\sqrt{2}}(\ket{2}\pm\ket{3})|^2$$
+        $$P_{\pm b_2,a_3}=|\bra{a_3}\ket{B_2}|^2\to |\bra{3}\frac{1}{\sqrt{2}}(\ket{2}\pm\ket{3})|^2$$
 
-        We may see that this is equivalent to an integer multiple of the eigenvector $\ket{A_3}$ of operator $\hat{A}$. Thus, we may find that:
+      Since we know that the inner product of the same basis vectors produces one and two different basis vectors produces zero due to orthonormality, we find:
 
-        $$\hat{A}\hat{B}\ket{2}=b_2a_3\ket{A_3}$$
+        $$\boxed{P_{\pm b_2,a_1}=0}$$
+        $$P_{\pm b_2,a_2}=\Big|\frac{\pm 1}{\sqrt{2}}\Big|^2$$
+        $$P_{\pm b_2,a_3}=\Big|\frac{\pm 1}{\sqrt{2}}\Big|^2$$
 
-        And, therefore, \underline{the measurement produces $a_3$ with a probability of $1$}
+        And finally:
+
+        $$\boxed{P_{\pm b_2,a_2}=\frac{1}{2}}$$
+        $$\boxed{P_{\pm b_2,a_3}=\frac{1}{2}}$$
+
+        We may note that the sign on the $\ket{3}$ term is irrelevant, as we only care about the magnitude.
 
       \item Note that the result from part (a) indicates that we can not know the measurements of $A$ and $B$ at the same time with certainty. This is confirmed by the results from part (c), as we find that measuring $\hat{B}\ket{2}$ before $\hat{A}$ has no effect on the result of $\hat{A}$
 
