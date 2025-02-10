@@ -500,6 +500,168 @@
 
     \end{itemize}
 
+  \item Magnetic Field in a General Direction
+
+    \begin{itemize}
+
+      \item Let us take a more general field:
+
+        $$\vec{B}=B_o\hat{z}+B_1\hat{x}$$
+
+      \item We can find the Hamiltonian to be:
+
+        $$H=\omega_oS_z+\omega_1S_x$$
+
+      \item We can write this as:
+
+        $$H=\frac{\hbar}{2}\left( \begin{matrix} \omega_o & \omega_1\\ \omega_1 & -\omega_o\end{matrix} \right)$$
+
+      \item The eigenvalues become:
+
+        $$\lambda=\pm\frac{\hbar}{2}\sqrt{\omega_o^2+\omega_1^2}$$
+
+      \item This indicates:
+
+        $$H=\sqrt{\omega_o^2+\omega_1^2}S_n$$
+
+        \begin{itemize}
+
+          \item Such that:
+
+            $$\ket{+}_n=\cos\left( \frac{\theta}{2} \right)\ket{+}+\sin\left( \frac{\theta}{2} \right)\ket{-}$$
+            $$\ket{-}_n=\sin\left( \frac{\theta}{2} \right)\ket{+}-\cos\left( \frac{\theta}{2} \right)\ket{-}$$
+
+        \end{itemize}
+
+      \item We take the start state as:
+        
+        $$\ket{\psi(0)}=\ket{+}$$
+
+      \item Ultimately, we may calculate:
+
+        $$\ket{\psi(t)}=e^{-iE_+t/\hbar}\cos\left( \frac{\theta}{2} \right)\ket{+}_n+e^{-iE_-t/\hbar}\sin\left( \frac{\theta}{2} \right)\ket{-}_n$$
+
+        \begin{itemize}
+
+          \item Where $E_{\pm}=\pm\frac{\hbar}{2}\sqrt{\omega_o^2+\omega_1^2}$
+
+        \end{itemize}
+
+      \item We can find the probability of a spin flip as:
+
+        $$P_{+\to-}=|\bra{-}\ket{\psi(t)}|^2$$
+        $$P_{+\to-}=|\bra{-}[e^{-iE_+t/\hbar}\cos\left( \frac{\theta}{2} \right)\ket{+}_n+e^{-iE_-t/\hbar}\sin\left( \frac{\theta}{2} \right)\ket{-}_n]|^2$$
+        $$P_{+\to-}=|e^{-iE_+t/\hbar}\cos\left( \frac{\theta}{2} \right)\bra{-}\ket{+}_n+e^{-iE_-t/\hbar}\sin\left( \frac{\theta}{2} \right)\bra{-}\ket{-}_n|^2$$
+        $$P_{+\to-}(t)=\frac{\omega_1^2}{\omega_o^2+\omega_1^2}\sin^2\left( \frac{\sqrt{\omega_o^2+\omega_1^2}}{2} t\right)$$
+
+        \begin{itemize}
+
+          \item This gives us Rabi's Formula
+
+          \item We need a large $x$-component in $\vec{B}$ for significant spin flip probability
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Time-Dependent Hamiltonians
+
+    \begin{itemize}
+
+      \item Important for magnetic resonance
+
+      \item Apply a time-dependent field resonant with the Larmor precession frequency ($\omega_o$)
+
+      \item Used in all kinds of applications like medical diagnostics, biology, chemistry, etc.
+
+      \item We assume a field:
+
+        $$\vec{B}=B_o\hat{z}+B_1[\cos(\omega t)\hat{x}+\sin(\omega t)\hat{y}]$$
+
+        \begin{itemize}
+
+          \item $B_o$ sets the splitting of up and down, while $B_1$ produces a flip between up and down
+
+        \end{itemize}
+
+      \item In matrix notation, we may write our Hamiltonian as:
+
+        $$H=\frac{\hbar}{2}\left( \begin{matrix} \omega_o & \omega_1e^{-i\omega t}\\ \omega_1e^{i\omega_o t} & -\omega_o \end{matrix}\right)$$
+
+        \item Since this is time-dependent, we can not use the recipe for Schr\"odinger time evolution
+
+        \item We take the quantum state:
+
+          $$\ket{\psi(t)}=c_+(t)\ket{+}+c_-(t)\ket{-}$$
+
+        \item We substitute into the Schr\"odinger equation to get:
+
+          $$i\hbar\frac{d}{dt}\left( \begin{matrix} c_+(t)\\c_-(t)\end{matrix} \right)=\frac{\hbar}{2}\left( \begin{matrix} \omega_o & \omega_1e^{-i\omega t}\\ \omega_1e^{i\omega t} & \omega_o\end{matrix} \right)\left( \begin{matrix} c_+(t)\\ c_-(t)\end{matrix} \right)$$
+
+        \item This gives us:
+
+          $$i\hbar \dot{c}_+(t)=\frac{\hbar}{2}\omega_oc_+(t)+\omega_1e^{-i\omega t}c_-(t)$$
+          $$i\hbar \dot{c}_+(t)=\frac{\hbar}{2}\omega_1e^{i\omega t}c_+(t)-\omega_oc_-(t)$$
+
+        \item If we go to a frame rotating with the magnetic fireld, the state vector is:
+
+          $$\ket{\tilde{\psi}(t)}=c_+(t)e^{i\omega t/2}\ket{+}+c_-(t)e^{-i\omega t/2}\ket{-}$$
+
+        \item We can further simplify to:
+
+          $$\ket{\tilde{\psi}(t)}=\alpha_+(t)\ket{+}+\alpha_-(t)\ket{-}$$
+
+        \item In the non-rotating frame, we have:
+
+          $$\ket{\psi(t)}=\alpha_+(t)e^{-i\omega t/2}\ket{+}+\alpha_-(t)e^{i\omega t/2}\ket{-}$$
+
+        \item We can then plug this form of the quantum state equation back into the Schr\"odinger equation. This yields:
+
+          $$i\hbar\dot{\alpha}_+(t)=-\frac{\hbar\Delta\omega}{2}\alpha_+(t)+\frac{\hbar\omega_1}{2}\alpha_-(t)$$
+          $$i\hbar\dot{\alpha}_-(t)=\frac{\hbar\omega_1}{2}\alpha_+(t)+\frac{\hbar\Delta\omega}{2}\alpha_-(t)$$
+
+          \begin{itemize}
+
+            \item Where $\Delta\omega=\omega-\omega_o$
+
+            \item We may see that this removes the time dependence element:
+
+              $$\tilde{H}=\frac{\hbar}{2}\left( \begin{matrix} -\Delta\omega & \omega_1\\ \omega_1 & \Delta \omega \right)$$
+
+              \item From here, we wish to return to computing the probability of a spin flip
+
+          \end{itemize}
+
+        \item We may notice that the rational transformation does not alter the basis states, such that:
+
+          $$\ket{\psi(0)}=\ket{\tilde{\psi}(0)}=\ket{+}$$
+
+        \item We may observe that our solution then becomes Rabi's formula with $\omega_o\to -\Delta\omega$:
+
+          $$P_{+\to-}(t)=\frac{\omega_1^2}{(\omega-\omega_o)^2+\omega_1^2}\sin^2\left( \frac{\sqrt{(\omega-\omega_o)^2+\omega_1^2}}{2} t\right)$$
+
+          \begin{itemize}
+
+            \item It is said that, in this case, the spin 'flops'
+              
+            \item When $\omega=0$, it represents Rabi's formula
+
+          \end{itemize}
+
+        \item If we take $\omega=\omega_o$, then:
+
+          $$P_{+\to-}=\sin^2\left( \frac{\omega_1}{2}t \right)$$
+
+          \begin{itemize}
+
+            \item We may observe that there is a 100\% probability of spin flop even for small $B_1$ when $\omega_1t=\pi$, which is achieved with a ``$\pi$-pulse
+
+            \item Moving from a positive to negative spin sign is known as emission (energy is emitted), while moving the other way is known as absorption (energy is absorbed)
+
+          \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
