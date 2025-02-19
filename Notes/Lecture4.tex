@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Quantum Mechanics
+% Professor: G. Fiete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Lecture 4}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: G. Fiete}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Wave Equation for Unidimensional Particle
+
+    \begin{itemize}
+
+      \item In classical mechanics, we have the energy problem, with $E$ as the total energy, $T$ as the kinetic energy, and $V$ as the potential energy:
+
+        $$E=T+V=\frac{p^2}{2m}+V(x)$$
+
+      \item In quantum mechanics, we may define the Hamiltonian as:
+
+        $$\hat{H}=\frac{\hat{p}}{2m}+V(\hat{x})$$
+
+        \begin{itemize}
+
+          \item Where $\hat{p}$ is the momentum operator and $\hat{x}$ is the position
+
+        \end{itemize}
+
+      \item From here, the time-independent Schr\"odinger equation may be written as:
+
+        $$\hat{H}\phi_E(x)=E\phi_E(x)$$
+
+        \begin{itemize}
+
+          \item Where $\phi_E(x)$ represents the wave function/eigenfunction
+
+        \end{itemize}
+
+      \item We may continue to get:
+
+        $$\hat{p}=-i\hbar\frac{d}{dx},\quad \hat{x}=x$$
+
+        \begin{itemize}
+
+          \item This can be used to obtain:
+
+            $$\hat{p}\phi(x)=-i\hbar\frac{d}{dx}\phi(x),\quad \hat{x}\phi(x)=x\phi(x)$$
+
+        \end{itemize}
+
+      \item From here, we get:
+
+        $$\hat{H}\psi(x)=-\frac{\hbar^2}{2m}\frac{d^2}{dx^s}\psi(x)+V(x)\psi(x)=E\psi(x)$$
+
+      \item The above is the wave equation we need to solve. The wave function can generically be written as:
+
+        $$\psi(x)=\sum_{n=0}^d\psi_n\phi_{E_n}(x)$$
+
+        \begin{itemize}
+
+          \item Note that $\psi_n$ is a scalar coefficient (projections of $\psi$ along the $n$-th direction) and $\phi_{E_n}(x)$ represents basis functions
+
+          \item Also, note that, from previous lessons, we may recall that the probability of finding the system in a particular eigenstate is:
+
+            $$P_{E_n}=|\psi_n|^2$$
+
+        \end{itemize}
+
+      \item In Dirac notation:
+
+        $$\ket{\psi}=\left( \begin{matrix} \bra{E_1}\ket{\psi}\\ \bra{E_2}\ket{\psi}\\\vdots\\\bra{E_n}\ket{\psi} \end{matrix} \right)$$
+
+        \begin{itemize}
+
+          \item And also:
+
+            $$\bra{\psi}=\left( \bra{E_1}\ket{\psi}^*\quad\bra{E_2}\ket{\psi}^*\quad\cdots\quad\bra{E_n}\ket{\psi}^* \right)$$
+
+        \end{itemize}
+
+      \item Change of Basis
+
+        \begin{itemize}
+
+          \item Changing basis to a position representation allows us to obtain the probability of finding the particle at $x$ as:
+
+            $$P_x=|\psi(x)|^2$$
+
+          \item This means that $|\psi(x)|^2$ is now a probability density such that:
+
+            $$\int_{-\infty}^{\infty}P(x)\,dx=\int_{-\infty}^{\infty}|\psi(x)|^2\,dx=1$$
+
+          \item Furthermore, we may find the probability that the particle is in a certain range as:
+
+            $$P[a\leq x\leq b]=\int_{a}^{b}P(x)\,dx=\int_{a}^{b}|\psi(x)|^2\,dx$$
+
+          \item In summary, we determine:
+
+            $$\bra{x}\ket{\psi}=\psi(x)$$
+            $$\bra{\psi}\ket{x}=\psi^*(x)$$
+            $$\hat{A}=\hat{A}(x)$$
+
+        \end{itemize}
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
