@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Quantum Mechanics
+% Professor: G. Fiete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 4}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: G. Fiete}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item To normalize the state, we can take the magnitudes of each component to get:
+
+        $$\sqrt{A^2+(-A)^2+(A)^2}=1$$
+
+        This gives us:
+
+        $$\sqrt{3A^2}=1$$
+        $$A\sqrt{3}=1$$
+        $$\boxed{A=\frac{1}{\sqrt{3}}}$$
+
+        Thus, we may write the initial state as:
+
+        $$\boxed{\ket{\psi(t=0)}=\frac{1}{\sqrt{3}}(\ket{\phi_1}-\ket{\phi_2}+i\ket{\phi_3})}$$
+
+      \item We know that the possible measurements are the eigenvalues of the corresponding eigenstates. Let us refer to them as the respective energies of each state, $E_n$. Therefore, we can measure any of the following observables:
+
+        $$\ket{\phi_1}\to E_1,\ket{\phi_2}\to E_2,\ket{\phi_3}\to E_3$$
+
+        Note that, for an infinite square well, the possible energy potentials for a Spin-1 system are:
+
+        $$\boxed{E_1=\frac{\pi^2\hbar^2}{2mL^2},\,E_2=\frac{2\pi^2\hbar^2}{mL^2},\,E_3=\frac{9\pi^2\hbar^2}{2mL^2},\,}$$
+
+        We can find the probabilities of each as:
+
+        $$P_{\E_n}=|\bra{\phi_n}\ket{\psi(t)}|^2$$
+
+        We may observe that, because the magnitude of each coefficient is same, they all occur with the same probability, or:
+
+        $$\boxed{P_{E_n}=1/3}$$
+
+      \item We can find the average energy by using the probability as weights:
+
+        $$<E>=P_{E_1}E_1+P_{E_2}E_2+P_{E_3}E_3$$
+
+        This gives us:
+
+        $$<E>=\frac{1}{3}[E_1+E_2+E_3]$$
+
+        Using the energy values from above, we write:
+
+        $$<E>=\frac{1}{3}\left[ \frac{\pi^2\hbar^2}{2mL^2}+\frac{2\pi^2\hbar^2}{mL^2}+\frac{9\pi^2\hbar^2}{2mL^2} \right]$$
+        $$<E>=\frac{1}{3}\left[ \frac{7\pi^2\hbar^2}{mL^2} \right]$$
+        $$\boxed{<E>=\frac{7\pi^2\hbar^2}{3mL^2} }$$
+
+      \item Using our time evolution formula in tandem with our $\phi_n$ eigenstates and corresponding $E_n$ eigenvalues, we may write the time evolution as:
+
+        $$\boxed{\ket{\psi(t)}=\frac{1}{\sqrt{3}}\left[e^{-\frac{iE_1t}{\hbar}}\ket{\phi_1}-e^{-\frac{iE_2t}{\hbar}}\ket{\phi_2}+ie^{-\frac{iE_3t}{\hbar}}\ket{\phi_3}\right]}$$
+
+      \item Plugging this in to the above equation, we find:
+
+        $$\ket{\psi\left( \frac{\hbar}{E_1} \right)}=\frac{1}{\sqrt{3}}\left[e^{-i}\ket{\phi_1}-e^{-\frac{iE_2}{E_1}}\ket{\phi_2}+ie^{-\frac{iE_3}{E_1}}\ket{\phi_3}\right]$$
+
+        We may observe, however, that energy states are stationary, and, therefore, \underline{the probabilities remain the same}.
+
+    \end{enumerate}
+
+  \item Given that we can infer the well is of length $L$ based on the formula, we may normalize by writing:
+
+    $$\int_0^L |\psi|^2\,dx=1$$
+
+    This gives us:
+
+    $$\int_0^L (AxL-Ax^2)^2\,dx=1$$
+
+    We continue to solve:
+
+    $$\int_0^L A^2x^4-2A^2x^3L+A^2x^2L^2\,dx=1$$
+    $$\left[\frac{A^2x^5}{5}-\frac{A^2x^4L}{2}+\frac{A^2x^3L^2}{3}\right]\Big|_0^L=1$$
+    $$\left[\frac{A^2L^5}{5}-\frac{A^2L^5}{2}+\frac{A^2L^5}{3}\right]=1$$
+    $$\frac{A^2L^5}{30}=1$$
+    $$\boxed{A=\pm\sqrt{\frac{30}{L^5}}}$$
+
+    Thus, we write the equation of state as:
+
+    $$\boxed{\ket{\psi(x,t=0)}=x\sqrt{\frac{30}{L^5}}(L-x)}$$
+
+    We know that, for a particle of mass $m$ in an infinite square well of length $L$, the eigenstates may be written as:
+
+    $$\Psi(x,0)=\sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right)$$
+
+    And the energies are written as:
+
+    $$E_n=\frac{n^2\pi^2\hbar^2}{2mL^2}$$
+
+    We may write the time evolution of the system as:
+
+    $$\psi(x,t)=\sum_n c_n \Psi(x,0)e^{-iE_nt/\hbar}$$
+
+    We can find $c_n$ as:
+
+    $$c_n=\int_0^L \psi(x,0)\Psi(x,0)\,dx$$
+
+    We expand to write:
+
+    $$c_n=\frac{2}{L^3}\sqrt{15}\int_0^L x(L-x)\sin\left( \frac{n\pi x}{L} \right)\,dx$$
+
+    Entering this into a solver, we get:
+
+    $$c_n=\frac{2}{L^3}\sqrt{15}\left[ \frac{2L^3}{(n\pi)^3}[\cos(n\pi)-1] \right]$$
+
+    This is equivalent to:
+
+    $$c_n=\frac{4\sqrt{15}}{n^3\pi^3}(1-(-1)^n)$$
+
+    We may see that, for even $n$ values, $c_n=0$, and for odd values, we find:
+
+    $$\boxed{c_n=\frac{8\sqrt{15}}{n^3\pi^3},\quad n=1,3,5\cdots}$$
+
+    Therefore, we may conclude that the time-evolving state may be written as:
+
+    $$\psi(x,t)=\sum_{n=1,3,5,\ldots} \left( \frac{8\sqrt{15}}{n^3\pi^3} \right)\left( \sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right) \right)e^{-\frac{in^2\pi^2\hbar}{2mL^2}}$$
+
+    Pulling constants out front gives us:
+
+    $$\boxed{\psi(x,t)=\frac{8}{\pi^3}\sqrt{\frac{30}{L}}\sum_{n=1,3,5,\ldots} \left( \frac{1}{n^3} \right)\left( \sin\left( \frac{n\pi x}{L} \right) \right)e^{-\frac{in^2\pi^2\hbar}{2mL^2}}}$$
+
+    Finally, we may calculate the expectation value as:
+
+    $$<x>=\int_0^L \psi^*(x,t)\cdot x\cdot \psi(x,t)\,dx$$
+
+    We may observe that the factors independent of $x$ (let us call them $I_x$), in tandem with the cancellation of the exponential, allow this to be simplified to:
+
+    $$<x>=I_x\int_0^L x\sin^2\left( \frac{n\pi x}{L} \right)\,dx$$
+
+    Plugging this into a solver, we find:
+
+    $$<x>=\frac{I_xL^2}{4}$$
+
+    We expand our factor to get:
+
+    $$<x>=\frac{30}{L}\cdot\left( \frac{2}{\pi} \right)^6\cdot\left( \sum_{n=1,3,5\ldots} n^{-2} \right)^2\frac{L^2}{4}$$
+
+    Finally, this simplifies to:
+
+    $$\boxed{<x>=\frac{15L}{2\pi^2}}$$
+
+  \item We know that the wave function may be written as:
+
+    $$\phi(x)=\sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right)$$
+
+    Now with $L\to3L$, we find:
+
+    $$\phi(x)=\sqrt{\frac{2}{3L}}\sin\left( \frac{n\pi x}{3L} \right)$$
+
+    This means that, for the ground and first excited states, we have:
+
+    $$\phi_{n=1}(x)=\sqrt{\frac{2}{3L}}\sin\left( \frac{\pi x}{3L} \right)$$
+    $$\phi_{n=2}(x)=\sqrt{\frac{2}{3L}}\sin\left( \frac{2\pi x}{3L} \right)$$
+
+    From here, we may calculate the probabilities of each state as:
+
+    $$P_{n=1}=|\bra{\phi_1(x)}|\ket{\psi(x)}|^2$$
+
+    Given that the wave function is real, we know $\phi_{n=1}^*(x)=\phi_{n=1}(x)$. This gives us:
+
+    $$P_{n=1}=\left( \int_0^L \phi_{n=1}(x)\psi(x)\,dx+\int_{L}^{3L} \phi_{n=1}(x)(0)\,dx \right)^2$$
+    $$P_{n=1}=\left( \frac{2}{\sqrt{3}L}\int_0^L \sin\left( \frac{\pi x}{3L} \right)\sin\left( \frac{\pi x}{L} \right)\,dx\right)^2$$
+
+    Entering this into a solver, we get:
+
+    $$P_{n=1}=\left( \frac{9}{8\pi}\right)^2$$
+    $$\boxed{P_{n=1}=\frac{81}{64\pi^2}}$$
+
+    Similarly, we may find:
+
+    $$P_{n=2}=|\bra{\phi_2(x)}|\ket{\psi(x)}|^2$$
+
+    We proceed in a similar manner to the ground state, to write:
+
+    $$P_{n=2}=\left( \int_0^L \phi_{n=2}(x)\psi(x)\,dx\right)^2$$
+    $$P_{n=2}=\left( \frac{2}{\sqrt{3}L}\int_0^L \sin\left( \frac{2\pi x}{3L} \right)\sin\left( \frac{\pi x}{L} \right)\,dx\right)^2$$
+
+    Once again, we use a solver to get:
+
+    $$P_{n=2}=\left( \frac{9}{5\pi}\right)^2$$
+    $$\boxed{P_{n=2}=\frac{81}{25\pi^2}}$$
+
+\end{enumerate}
+
+\end{document}
+
