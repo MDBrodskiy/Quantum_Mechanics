@@ -112,6 +112,120 @@
 
     \end{itemize}
 
+  \item Quantized Energies and Spectroscopy
+
+    \begin{itemize}
+
+      \item Spectroscopy is an experimental technique for measuring the energy fingerprint of a system
+
+      \item Historically, hydrogen played an important role in the development of this technique
+
+      \item Downward transitions give rise to emission spectra
+
+      \item Upward transitions give rise to absorption spectra
+
+      \item $E_i+E_j$, there is a possible spectral line with photon energy $E_i-E_j$, with photon frequency $f_{ij}$ and wavelength $\lambda_{ij}$:
+
+        $$f_{ij}=\frac{\omega_{ij}}{2\pi}=\frac{E_i-E_j}{h}$$
+        $$\lambda_{ij}=\frac{c}{f_{ij}}=\frac{hc}{E_i-E_j}$$
+
+        \begin{itemize}
+
+          \item Assuming $E_i-E_j>0$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Infinite Square Well
+
+    \begin{itemize}
+
+      \item We want to solve:
+
+        $$\left( -\frac{\hbar^2}{2m}\frac{d^2}{dx^2}+V(x) \right)\phi_E(x)=E\phi_E(x)$$
+
+      \item The solutions of the this depend critically on the functional dependence of $V(x)$
+
+      \item We create a variable $k^2$ such that:
+
+        $$k^2=\frac{-2mE}{\hbar^2}$$
+
+      \item This gives us:
+
+        $$\frac{d^2}{dx^2}\phi_E(x)=k^2\phi_E(x)$$
+
+      \item There are two possible forms of the solution:
+
+        $$\phi_E(x)=Ae^{ikx}+Be^{-ikx}$$
+        $$\phi_E(x)=A\sin(kx)+B\cos(kx)$$
+
+      \item Applying boundary conditions, we obtain:
+
+        $$k_n=\frac{n\pi}{L}$$
+
+      \item From this, we may determine:
+
+        $$E_n=\frac{n^2\hbar^2}{2mL^2},\quad n=1,2,3\cdots$$
+
+      \item The general form of the wave function may be written:
+
+        $$\phi_n(x)=\sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right)$$
+
+      \item We can compute expectation values as:
+
+        $$<\hat{x}>=\bra{E_n|\hat{x}}\ket{E_n}=\int_{-\infty}^{\infty}\phi^{*}(x)x\phi_n(x)\,dx$$
+
+        This gives us:
+
+        $$\int_{-\infty}^{\infty}x|\phi_n(x)|^2\,dx=\frac{L}{2}$$
+
+    \end{itemize}
+
+  \item Finite Square Well
+
+    \begin{itemize}
+
+      \item In a finite well, we have potential energy defined by:
+
+        $$V(x)=\left\{\begin{array}{ll} V_o,& x<-a\\0,&-a<x<a\\ V_o,&x>a\end{array}$$
+
+        \item This gives us:
+
+          $$\left( -\frac{\hbar^2}{2m}\fraC{d^2}{dx^2} \right)\phi_E(x)=E\phi_E(x)\quad\text{ (inside box)}$$
+          $$\left( -\frac{\hbar^2}{2m}\fraC{d^2}{dx^2} +V_o\right)\phi_E(x)=E\phi_E(x)\quad\text{ (outside box)}$$
+
+        \item We know that:
+
+          $$k=\sqrt{\frac{2mE}{\hbar^2}}\quad\text{ (inside)}$$
+          $$q=\sqrt{\frac{2m(V_o-E)}{\hbar^2}}\quad\text{ (outside)}, 0<E<V_o$$
+
+        \item We may find the solutions inside and outside of the box (respectively) as:
+
+          $$\phi_E(x)=e^{-ikx}\text{ or }\phi_E(x)=e^{-kx}\quad\text{ (inside)}$$
+          $$\phi_E(x)=Ae^{qx}+Be^{-qx}\quad\text{ (outside)}$$
+
+        \item Thus, we may write:
+
+          $$\phi_E(x)=\left\{\begin{array}{ll} Ae^{qx}+Be^{-qx},& x<-a\\C\sin(kx)+D\cos(kx),&-a<x<a\\ Fe^{qx}+Ge^{-qx},&x>a\end{array}$$
+
+        \item Two boundary conditions:
+
+          \begin{enumerate}
+
+            \item $\phi_E(x)$ is continuous
+
+            \item $d\phi_E(x)/dx$ is continuous (unless the potential is infinite)
+
+          \end{enumerate}
+
+        \item Since our problem is symmetric about the origin, we have even and odd solutions:
+
+          $$\phi_{even}(x)=\left\{\begin{array}{ll} Ae^{qx},& x<-a\\D\cos(kx),&-a<x<a\\ Ae^{-qx},&x>a\end{array}$$
+          $$\phi_{odd}(x)=\left\{\begin{array}{ll} Ae^{qx},& x<-a\\C\sin(kx),&-a<x<a\\ -Ae^{-qx},&x>a\end{array}$$
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
