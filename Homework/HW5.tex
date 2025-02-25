@@ -66,11 +66,12 @@
 
       \item Using our time evolution formula in tandem with our $\phi_n$ eigenstates and corresponding $E_n$ eigenvalues, we may write the time evolution as:
 
-        $$\boxed{\ket{\psi(t)}=\frac{1}{\sqrt{3}}\left[e^{-\frac{iE_1t}{\hbar}}\ket{\phi_1}-e^{-\frac{iE_2t}{\hbar}}\ket{\phi_2}+ie^{-\frac{iE_3t}{\hbar}}\ket{\phi_3}\right]}$$
+        $$\boxed{\ket{\psi(t)}=\frac{1}{\sqrt{3}}\left[e^{-\frac{i\pi^2\hbar t}{2mL^2}}\ket{\phi_1}-e^{-\frac{2i\pi^2\hbar t}{mL^2}}\ket{\phi_2}+ie^{-\frac{9i\pi^2\hbar t}{2mL^2}}\ket{\phi_3}\right]}$$
 
       \item Plugging this in to the above equation, we find:
 
         $$\ket{\psi\left( \frac{\hbar}{E_1} \right)}=\frac{1}{\sqrt{3}}\left[e^{-i}\ket{\phi_1}-e^{-\frac{iE_2}{E_1}}\ket{\phi_2}+ie^{-\frac{iE_3}{E_1}}\ket{\phi_3}\right]$$
+        $$\ket{\psi\left( \frac{\hbar}{E_1} \right)}=\frac{1}{\sqrt{3}}\left[e^{-i}\ket{\phi_1}-e^{-4i}\ket{\phi_2}+ie^{-9i}\ket{\phi_3}\right]$$
 
         We may observe, however, that energy states are stationary, and, therefore, \underline{the probabilities remain the same}.
 
@@ -96,65 +97,50 @@
 
     $$\boxed{\ket{\psi(x,t=0)}=x\sqrt{\frac{30}{L^5}}(L-x)}$$
 
-    We know that, for a particle of mass $m$ in an infinite square well of length $L$, the eigenstates may be written as:
+    We know that, for a particle of mass $m$ in an infinite square well of length $L$, we have:
 
-    $$\Psi(x,0)=\sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right)$$
+    $$\psi(x,0)=\sum_{n=1}^{\infty} c_n\phi_n(x)$$
 
-    And the energies are written as:
+    We may solve for the constant as:
 
-    $$E_n=\frac{n^2\pi^2\hbar^2}{2mL^2}$$
+    $$c_n=\bra{E_n|\ket{\psi(0)}}$$
+    $$c_n=\int_{0}^L\phi^*(x)\psi(x,0)\,dx$$
+    $$c_n=\int_{0}^L \sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right)Ax(L-x)\,dx$$
 
-    We may write the time evolution of the system as:
+    Finally, solving this gets us:
 
-    $$\psi(x,t)=\sum_n c_n \Psi(x,0)e^{-iE_nt/\hbar}$$
+    $$c_n=\frac{4\sqrt{15}}{n^3\pi^3}[1-(-1)^n]\to \frac{8\sqrt{15}}{n^3\pi^3},\quad n=\text{odd}$$
 
-    We can find $c_n$ as:
+    We move on to find the time-dependent form as:
 
-    $$c_n=\int_0^L \psi(x,0)\Psi(x,0)\,dx$$
+    $$\psi(x,t)=\sum_{n} c_ne^{-iE_nt/\hbar}\phi_n(x)$$
 
-    We expand to write:
+    This gives us a final form of:
 
-    $$c_n=\frac{2}{L^3}\sqrt{15}\int_0^L x(L-x)\sin\left( \frac{n\pi x}{L} \right)\,dx$$
+    $$\psi(x,t)=\frac{8\sqrt{30}}{\pi^3\sqrt{L}}\sum_{n=\text{odd}}\frac{1}{n^3}e^{-iE_nt/\hbar}\sin\left( \frac{n\pi x}{L} \right)$$
 
-    Entering this into a solver, we get:
+    Expanding the energy gives us:
 
-    $$c_n=\frac{2}{L^3}\sqrt{15}\left[ \frac{2L^3}{(n\pi)^3}[\cos(n\pi)-1] \right]$$
-
-    This is equivalent to:
-
-    $$c_n=\frac{4\sqrt{15}}{n^3\pi^3}(1-(-1)^n)$$
-
-    We may see that, for even $n$ values, $c_n=0$, and for odd values, we find:
-
-    $$\boxed{c_n=\frac{8\sqrt{15}}{n^3\pi^3},\quad n=1,3,5\cdots}$$
-
-    Therefore, we may conclude that the time-evolving state may be written as:
-
-    $$\psi(x,t)=\sum_{n=1,3,5,\ldots} \left( \frac{8\sqrt{15}}{n^3\pi^3} \right)\left( \sqrt{\frac{2}{L}}\sin\left( \frac{n\pi x}{L} \right) \right)e^{-\frac{in^2\pi^2\hbar}{2mL^2}}$$
-
-    Pulling constants out front gives us:
-
-    $$\boxed{\psi(x,t)=\frac{8}{\pi^3}\sqrt{\frac{30}{L}}\sum_{n=1,3,5,\ldots} \left( \frac{1}{n^3} \right)\left( \sin\left( \frac{n\pi x}{L} \right) \right)e^{-\frac{in^2\pi^2\hbar}{2mL^2}}}$$
+    $$\boxed{\psi(x,t)=\frac{8}{\pi^3}\sqrt{\frac{30}{L}}\sum_{n=1,3,5,\ldots} \left( \frac{1}{n^3} \right)\left( \sin\left( \frac{n\pi x}{L} \right) \right)e^{-\frac{in^2\pi^2\hbar t}{2mL^2}}}$$
 
     Finally, we may calculate the expectation value as:
 
     $$<x>=\int_0^L \psi^*(x,t)\cdot x\cdot \psi(x,t)\,dx$$
 
-    We may observe that the factors independent of $x$ (let us call them $I_x$), in tandem with the cancellation of the exponential, allow this to be simplified to:
+    We may rewrite this as:
 
-    $$<x>=I_x\int_0^L x\sin^2\left( \frac{n\pi x}{L} \right)\,dx$$
+    $$<x>(t)=\bra{\psi(x,t)|x}\ket{\psi(x,t)}=\sum_{m,n}c_m^*c_ne^{i(E_m-E_n)t/\hbar}\bra{E_m|x}\ket{E_n}$$
 
-    Plugging this into a solver, we find:
+    Given that only diagonal elements survive, we take $m=n$ to get:
 
-    $$<x>=\frac{I_xL^2}{4}$$
-
-    We expand our factor to get:
-
-    $$<x>=\frac{30}{L}\cdot\left( \frac{2}{\pi} \right)^6\cdot\left( \sum_{n=1,3,5\ldots} n^{-2} \right)^2\frac{L^2}{4}$$
+    $$<x>(t)=\sum_{n=1}^{\infty}c_n^*c_n\bra{E_n|x}\ket{E_n}$$
+    $$<x>(t)=\frac{L}{2}\sum_{n=1}^{\infty}|c_n|^2$$
 
     Finally, this simplifies to:
 
-    $$\boxed{<x>=\frac{15L}{2\pi^2}}$$
+    $$\boxed{<x>(t)=\frac{L}{2}}$$
+
+    This result is expected, as, a particle in a box oscillating with a wave function would, on average, be in the center since there is no bias/preference for one side.
 
   \item We know that the wave function may be written as:
 
