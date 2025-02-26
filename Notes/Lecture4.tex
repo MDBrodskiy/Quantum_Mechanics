@@ -226,6 +226,82 @@
 
     \end{itemize}
 
+  \item General Remarks
+
+    \begin{itemize}
+
+      \item When $E>V$, the curvature of the wave function has the opposite sign
+
+      \item When $E<V$, the curvature has the same sign as the wave function
+
+      \item $k=\sqrt{2m(E-V)}$ and $\lambda=2\pi/k$, so:
+
+        $$\lambda=\frac{h}{\sqrt{2m(E-V)}}\propto \frac{1}{\sqrt{T}}$$
+
+        \begin{itemize}
+
+          \item We may say that the wavelength is inversely proportional to the square root of the kinetic energy
+
+        \end{itemize}
+
+      \item In the forbidden region, the decay constant is:
+
+        $$e^{-qx}\to q=\frac{\sqrt{2m(V-E)}}{\hbar}$$
+
+    \end{itemize}
+
+  \item Inversion Symmetry and Parity
+
+    $$\hat{H}(x)=\hat{H}(-x)$$
+
+    \begin{itemize}
+
+      \item The Hamiltonian is invariant under parity
+
+        $$[\hat{\text{Parity}},\hat{H}]=0$$
+
+      \item Energy eigenstates are also eigenstates of the parity operator
+
+        $$\hat{\text{Parity}}\phi_n(x)=+\phi_n(-x)\quad \text{ even parity}$$
+        $$\hat{\text{Parity}}\phi_n(x)=-\phi_n(-x)\quad \text{ odd parity}$$
+
+    \end{itemize}
+
+  \item Superposition States and Time-Dependence
+
+    \begin{itemize}
+
+      \item We start from:
+
+        $$H\ket{\psi}=i\hbar\frac{d}{dt}\ket{\psi}$$
+
+        \begin{itemize}
+
+          \item With:
+
+            $$\ket{\psi}=\sum_n c_Ne^{-iE_nt/\hbar}\ket{E_n}$$
+
+          \item In general, an initial state will be of the form:
+
+            $$\ket{\psi(0)}=\sum_nc_n\ket{E_n}$$
+            
+            \begin{itemize}
+
+              \item Where $c_n=\bra{E_n}\ket{\psi(0)}=\displaystyle \int \phi^*_n(x)\psi(x,t=0)\,dx$
+
+            \end{itemize}
+          
+          \item We may observe that, with this, we get:
+
+            $$<\hat{x}>=\frac{L}{2}\left[ 1-\frac{32}{9\pi^2}\cos\left( \frac{3\pi^2\hbar}{2mL^2}t \right) \right]\quad \text{ (note the oscillation with Bohr frequency)}$$
+            $$<\hat{p}>=\frac{8}{3}\frac{\hbar}{2}\sin\left( \frac{3\pi^2\hbar}{2mL^2}t \right)$$
+
+          \item This is another example of Ehrenfest's theorem: quantum expectation values obey classical laws
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
