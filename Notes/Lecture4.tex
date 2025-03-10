@@ -302,6 +302,193 @@
 
     \end{itemize}
 
+  \item Unbound States
+
+    \begin{itemize}
+
+      \item Occur when $E>V_o$
+
+      \item The simplest unbound state is a free particle where $V(x)=0$ everywhere:
+
+        $$\frac{d^2}{dx^2}[\phi_E(x)]=-k^2\phi_E(x)$$
+
+      \item The solutions are:
+
+        $$\phi_E(x)=Ae^{ikx}+Be^{-ikx}$$
+
+        \begin{itemize}
+
+          \item Where there is no condition to ``fit'' a certain number of wavelengths in a region
+
+        \end{itemize}
+
+      \item To understand the free particle function, consider:
+
+        $$\psi_E(x,t)=\phi_E(x)e^{-iEt/\hbar}$$
+        $$\psi_E(x,t)=\left[  Ae^{ikx}+Be^{-ikx}\right]e^{-iEt/\hbar}$$
+        $$\psi_E(x,t)=Ae^{i(kx-\omega t)/\hbar}+Be^{-i(kx-\omega t)/\hbar}$$
+
+        \begin{itemize}
+
+          \item Observe that this function has a form familiar to classical physics: $f(x\pm vt)$
+
+          \item This form retains its shape as it moves with speed $v=\omega/k$, or the phase velocity
+            
+          \item The energy eigenstate has a right and left-moving part
+
+        \end{itemize}
+
+      \item It is convenient to use wave vector eigenstates:
+
+        $$\phi_k(x)=Ae^{ikx}$$
+        $$\phi_E(x)=\phi_{+k}(x)+\phi_{-k}(x)$$
+
+    \end{itemize}
+
+  \item Momentum Eigenstates
+
+    \begin{itemize}
+
+      \item We may find that:
+
+        $$p=\hbar k$$
+
+      \item As well as:
+
+        $$\phi_p(x)=Ae^{ipx/\hbar}$$
+
+        \begin{itemize}
+
+          \item Where $x$ is a variable, and $p$ is a particular momentum:
+
+            $$p=\hbar k=\frac{h}{2\pi}\cdot\frac{2\pi}{\lambda}=\frac{h}{\lambda}$$
+
+          \item This represents the de-Broglie wavelength:
+
+            $$\lambda_{dB}=\frac{h}{p}$$
+            $$E=\frac{p^2}{2m}\Rightarrow [H,p]=0$$
+
+            \begin{itemize}
+
+              \item This implies that energy and momentum share eigenstates
+
+              \item In our case, we have a degeneracy, where $\ket{p}$ and $\ket{-p}$ have the same energy
+
+              \item Returning to the issue of the phase velocity, we can write:
+
+                $$\psi_p(x,t)=Ae^{i\frac{p}{\hbar}\left( x-\frac{pt}{2m} \right)}$$
+
+              \item This implies that the wave's speed is $v=\frac{p}{2m}$, despite the classical speed being $p/m$
+
+              \item We should properly describe the velocity of a particle by the ``group velocity of a wave function''
+
+            \end{itemize}
+
+          \item A more serious problem with the momentum eigenstates appears when one examines the probability density of the state
+
+            $$P(x)=|\phi_p(x)|^2=|A|^2\quad\text{ (constant)}$$
+
+            \begin{itemize}
+
+              \item This leads to two issues:
+
+                \begin{enumerate}
+
+                  \item The particle is equally likely to be at any location
+
+                  \item The wave function can not be normalized over all space
+
+                \end{enumerate}
+
+              \item Solution: construct wave packets built from a superposition of momentum eigenstates
+
+              \item All of the discrete basis states we have encountered satisfy these conditions:
+
+                $$\bra{a_i}\ket{a_{j\neq i}}=0\quad\text{ (orthogonality)}$$
+                $$\bra{a_i}\ket{a_{i}}=1\quad\text{ (normality)}$$
+                $$\sum \ket{a_i}\bra{a_i}=\mathbb{1}\quad\text{ (completeness)}$$
+                $$\bra{a_i}\ket{a_j}=\delta_{ij}\quad\text{ (orthonormality)}$$
+
+              \item To extend orthonormality to a continuous basis, one promotes a Kronecker delta function to a Dirac delta function:
+
+                $$\bra{p''}\ket{p'}=\delta(p''-p')$$
+
+              \item Where:
+
+                $$\int_{-\infty}^{\infty} \phi^*(x)_{p''}(x)\phi_{p'}(x)\,dx=\delta(p''-p')$$
+
+              \item For this to be the case, we must take:
+
+                $$A=\frac{1}{\sqrt{2\pi \hbar}}\Rightarrow \phi_p(x)=\frac{1}{\sqrt{2\pi \hbar}}e^{ipx/\hbar}$$
+
+              \item This makes:
+
+                $$|\phi_p(x)|^2\,dx$$
+
+              \item have units of length divided by $\hbar$, which means so does the Dirac delta function
+
+            \end{itemize}
+
+          \item For momentum eigenstates, the completeness relation is:
+
+            $$\int_{-\infty}^{\infty}\ket{p}\bra{p}\,dp=\mathbb{1}$$
+
+          \item We may obtain:
+
+            $$\psi(x)=\int_{-\infty}^{\infty}\phi_p(x)\psi(p)\,dp$$
+            $$\psi(x)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\phi(p)e^{ipx/\hbar}\,dp$$
+
+            \begin{itemize}
+
+              \item This clearly shows that $\psi(x)$ is the Fourier transform of $\phi(p)$. Thus, $\phi(p)$ is the Fourier transform of the position wave function:
+
+                $$\psi(x)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\psi(x)e^{-ipx/\hbar}\,dx$$
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Wave Packets
+
+    \begin{itemize}
+
+      \item We may create discrete wave packets:
+
+        $$p_o-\delta p, p_o, p_o+\delta p$$
+
+        \begin{itemize}
+
+          \item This leads to something local in space
+
+        \end{itemize}
+
+      \item We begin by writing:
+
+        $$\psi(x,0)=\sum_{j}c_j\phi_{p_j}(x)$$
+
+        \begin{itemize}
+
+          \item This expands to:
+
+            $$\psi(x,0)=\frac{1}{\sqrt{2\pi\hbar}}\left[ \frac{1}{2}e^{i(p_o-\delta p}x/\hbar+e^{ip_ox/\hbar}+\frac{1}{2}e^{i(p_o+\delta p)x/\hbar} \right]$$
+          \item We may get the time-dependent form as:
+
+            $$\psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}e^{ip_o\left( x-\frac{p_ot}{2m\hbar} \right)}\left[ 1+\cos\left( \frac{\delta p x}{\hbar}-\frac{p_o\delta pt}{m\hbar} \right) \right]$$
+
+            \begin{itemize}
+
+              \item We observe that:
+
+                $$v_{phase}=\frac{p_o}{2m}$$
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
