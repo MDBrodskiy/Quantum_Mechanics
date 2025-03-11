@@ -30,6 +30,7 @@
     * [**Homework 3**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Notes/HW3.pdf)
     * [**Homework 4**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Notes/HW4.pdf)
     * [**Homework 5**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Notes/HW5.pdf)
+    * [**Homework 6**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Notes/HW6.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Quantum_Mechanics/tree/master/Exams/)
 
 <!--
