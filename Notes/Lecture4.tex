@@ -483,9 +483,88 @@
 
                 $$v_{phase}=\frac{p_o}{2m}$$
 
+              \item The exponential term in the time-dependent form is referred to as the ``carrier wave''
+
+              \item The sinusoidal term is referred to as the ``envelope''
+
+              \item Note that, in the envelope, the group velocity becomes:
+
+                $$v_{group}=\frac{p_o}{m}$$
+
+              \item The sinusoid modulates the carrier wave
+
             \end{itemize}
 
         \end{itemize}
+
+      \item We can make a continuous superposition of momentum states as:
+
+        $$\psi(x,0)=\int_{-\infty}^{\infty}\phi(p)\frac{1}{\sqrt{2\phi\hbar}}e^{ipx/\hbar}\,dp$$
+
+      \item We then get:
+
+        $$\psi(x,t)=\int_{-\infty}^{\infty}\phi(p)\frac{1}{\sqrt{2\phi\hbar}}e^{ipx/\hbar}e^{-ip^2t/2m\hbar}\,dp$$
+        $$\phi(p)=\int_{-\infty}^{\infty}\psi(x,t)\frac{1}{\sqrt{2\phi\hbar}}e^{-ipx/\hbar}\,dp$$
+
+      \item We choose $\phi(p)$ to be a Gaussian centered at $p_o$:
+
+        $$\phi(p)=\left( \frac{1}{2\pi\beta} \right)^{1/2}e^{-(p-p_o)^2/4\beta^2}$$
+
+        \begin{itemize}
+
+          \item With $\langle p\rangle=p_o$, and $\Delta p=\beta$
+
+        \end{itemize}
+
+      \item Using this, along with the commutator, we obtain:
+
+        $$\Delta x\Delta p=\frac{\hbar}{2}\sqrt{1+\left( \frac{2\beta^2t}{m\hbar}\right)^2}$$
+
+        \begin{itemize}
+
+          \item Note that at $t=0$, we simply have the uncertainty as $\hbar/2$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Unbound States and Scattering
+
+    \begin{itemize}
+
+      \item Consider the following potential:
+
+        $$V(x)=\left\{\begin{array}{ll} 0,&x<-a\\-V_o,& -a<x<a\\0,&x>a\end{array}$$
+
+      \item Bound states occurs at $E<0$ and scattering states occur at $E>0$
+
+      \item This gives us:
+
+        $$\phi_E(x)=\left\{\begin{array}{ll} Ae^{ik_1x}+Be^{-ik_1x},&x<-a\\Ce^{ik_2x}+De^{-ik_2x},& -a<x<a\\Fe^{ik_1x}+Ge^{-ik_1x},&x>a\end{array}$$
+
+    \end{itemize}
+
+  \item Transmission Coefficient ($T$)
+
+    \begin{itemize}
+
+      \item We may write the coefficient as:
+
+        $$T=\Big|\frac{F}{A}\Big|^2=\frac{1}{1+\frac{(k_1-k_2)^2}{4k_1^2k_2^2}\sin^2(2k_2a)}$$
+
+    \end{itemize}
+
+  \item Reflection Coefficient ($R$)
+
+    \begin{itemize}
+
+      \item Similarly, we may write the coefficient as:
+
+        $$R=\Big|\frac{B}{A}\Big|^2=\frac{1}{1+\frac{4k_1^2k_2^2}{(k_1^2-k_2^2)\sin^2(2k_2a)}}$$
+
+      \item The two coefficients are related to each other in that:
+
+        $$T+R=1$$
 
     \end{itemize}
 
