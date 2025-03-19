@@ -710,6 +710,85 @@
 
     \end{itemize}
 
+  \item Orbital Angular Momentum:
+
+    \begin{itemize}
+
+      \item Angular momentum along the $z$ axis can be written in operator form using:
+
+        $$L_z=-i\hbar\frac{d}{d\phi}$$
+
+      \item Since the following equal zero, we can tell that they are simultaneour eigenstates of $3$ operators:
+
+        $$[H,\vec{L}^2]=[H,L_z]=0$$
+
+      \item Separation of Variables: Spherical Coordinates
+
+        \begin{itemize}
+
+          \item Assume $\psi(r,\theta,\phi)=R(r)Y(\theta,\phi)$
+
+          \item We substitute to get:
+
+            $$-\frac{\hbar^2}{2\mu}\left[ Y(\theta,\phi)\frac{1}{r^2}\frac{d}{dr}\left( r^2\frac{d}{dr}R(r) \right)-\frac{R(r)}{\hbar^2r^2}\vec{L}^2Y(\theta,\phi) \right]+V(r)R(r)Y(\theta,\phi)=ER(r)Y(\theta,\phi)$$
+
+          \item We divide both sides by $R(r)Y(\theta,\phi)$ to get:
+
+            $$-\frac{\hbar^2}{2\mu}\left[ \frac{1}{r^2R(r)}\frac{d}{dr}\left( r^2\frac{d}{dr}R(r) \right)-\frac{1}{\hbar^2r^2}\vec{L}^2 \right]+V(r)=E$$
+
+          \item We isolate all coordinate dependence to one side of the equation:
+
+          $$\frac{1}{R(r)}\frac{d}{dr}\left( r^2\frac{d}{dr}R(r) \right)-\frac{2\mu}{\hbar^2}(E-V(r))r^2 \right]=\frac{1}{\hbar^2}\frac{1}{Y(\theta,\phi)}\vec{L}\psi(\theta,\phi)$$
+
+          \item We may continue separating variables:
+
+            $$Y(\theta,\phi)=\Theta(\theta)\Phi(\phi)$$
+
+          \item Thus, we get:
+
+            $$\left[ \frac{1}{\sin(\theta)}\frac{d}{d\theta}\left\sin(\theta)\frac{d}{d\theta}\right)-\frac{B}{\sin^2(\theta)} \right]\Theta(\theta)=-A\Theta(\theta)$$
+            $$\frac{d^2\Phi(\phi)}{d\phi^2}=-B\Phi(\phi)$$
+
+          \item Solving lets us find:
+
+            $$\Phi_m(\phi)=\bra{\phi}\ket{m}=\frac{1}{\sqrt{2\pi}}e^{im\phi}$$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Motion on a Sphere
+
+    \begin{itemize}
+
+      \item Goal: Combine solutions of $\Theta(\theta)$ and $\Phi_m(\phi)$ to find $Y(\theta,\phi)$, the so-called spherical harmonics
+
+      \item We can confine a particle of mass $\mu$ to a spherical plane of radius $r_o$
+        
+      \item Using the confined $r_o$ radius, we may state that $V(r_o)=0$, thus giving us:
+
+        $$\frac{\vec{L}^2}{2I} Y(\theta,\phi)=E_{sphere}Y(\theta,\phi)$$
+
+        \begin{itemize}
+
+          \item Note that $I$ is the moment of intertia, or $\mu r_o^2$
+
+          \item This agrees with the separation form we obtained:
+
+            $$A=\frac{2I}{\hbar^2}E_{sphere}=l(l+1)$$
+
+        \end{itemize}
+
+      \item Legendre Polynomials:
+
+        $$P_l(z)=\frac{1}{2^ll!}\frac{d^l}{dz^l}(z^2-1)^l$$
+
+      \item Lagrange Polynomials:
+
+        $$P_l^m(z)=P_l^{-m}(z)=(1-z^l)^{m/2}\frac{d^m}{dz^m}P_l(z)$$
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
