@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Quantum Mechanics
+% Professor: G. Fiete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Lecture 5}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: G. Fiete}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Associated Legendre Functions
+
+    \begin{itemize}
+
+      \item For $l=0,1,2,3\cdots$
+
+        $$\left[(1-z^2)\frac{d^2}{dz^2}-2z\frac{d}{dz}+l(l+1)-\frac{m^2}{1-z^2}\right]P(z)0$$
+
+      \item With:
+
+        $$P_l^m(z)=P_l^{-m}(z)=(1-z^2)^{m/2}\frac{d^m}{dz^m}P_l(z)$$
+
+      \item Since $P_l(z)$ is an $l$-th order polynomial, then $P_l^m(z)$ vanishes if $m>l$
+
+      \item Properties of $P_l^m(z)$:
+
+        \begin{itemize}
+
+          \item $P_l^m(z)=0$ if $|m|>l$
+
+          \item $P_l^m(z)=P_l^{-m}(z)$
+
+          \item $P_l^m(\pm1)=0$ for $m\neq0$
+
+          \item $P_l^m(-z)=(-1)^{l-m}P_l^{m}(z)$
+
+          \item $\displaystyle \int_{-1}^1 P_l^m(z)P_q^m(z)\,dz=\frac{2}{2l+2}\cdot\frac{(l+m)!}{(l-m)!}\delta_{lq}$
+
+        \end{itemize}
+
+      \item We can obtain our $\Theta(\theta)$ function as:
+
+        $$\Theta_l^m(\theta)=(-1)^m\frac{(2l+1)}{2}\frac{(l-m)!}{(l+m)!}P_l^k(\cos(\theta)),\quad m\geq0$$
+
+        And:
+
+        $$\Theta_l^{-m}(\theta)=(-1)^m\Theta_l^m(\theta)$$
+
+      \item Here, we arrive at a point where the associated Legendre Functions are needed:
+
+        $$P_o^o=1$$
+        $$P_1^o=\cos(\theta)$$
+        $$P_1^1=\sin(\theta)$$
+        $$P_2^o=\frac{1}{2}(3\cos^3(\theta)-1)$$
+        $$P_3^o=\frac{1}{2}(5\cos^5(\theta)-3\cos(\theta))$$
+
+      \item Spherical Harmonics
+
+        $$Y_l^m(\theta,\phi)=(-1)^{(m+|m|)/2}\sqrt{\frac{(2l+1)}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}P_l^m(\cos(\theta))e^{im\phi}$$
+        $$Y_l^m(\theta,\phi)=(-1)(Y_l^m(\theta,\phi))^*$$
+
+        Our first few values may be written as:
+
+        $$Y_o^o(\theta,\phi)=\frac{1}{\sqrt{4\pi}}$$
+        $$Y_1^o(\theta,\phi)=\sqrt{\frac{3}{4\pi}}\cos(\theta)$$
+        $$Y_1^{\pm1}(\theta,\phi)=\mp\sqrt{\frac{3}{8\pi}}\sin(\theta)e^{\pm i\phi}$$
+
+      \item Important Properties:
+
+        \begin{itemize}
+
+          \item Orthonormality:
+
+            $$\bra{l_1m_1}\ket{l_2m_2}=\delta_{l_1l_2}\delta_{m_1m_2}$$
+
+          \item Completeness:
+
+            $$\psi(\theta,\phi)=\sum_{l=0}^{\infty}\sum_{m=-l}^l C_{lm}Y_l^m(\theta,\phi)$$
+            $$C_{lm}=\bra{lm}\ket{\psi}=\int_0^{2\pi}\int_0^{\pi}(Y_l^m(\theta,\phi))^*\psi(\theta,\phi)\,d\Omega$$
+
+          \item Parity:
+
+            $$Y_l^m(\pi-\theta,\phi+\pi)=(-1)^lY_l^m(\theta,\phi)$$
+
+        \end{itemize}
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
