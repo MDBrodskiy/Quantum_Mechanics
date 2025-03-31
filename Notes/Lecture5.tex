@@ -94,6 +94,126 @@
 
     \end{itemize}
 
+  \item The Radial Component
+
+    \begin{itemize}
+
+      \item We may consider a general case:
+
+        $$R_n(\rho)=\rho^lH(\rho)e^{-\gamma\rho}$$
+
+        \begin{itemize}
+
+          \item Where $\rho=r/a$ with $r$ as the radial distance and $a$ as some scaling factor
+
+          \item Furthermore, we have:
+
+            $$\gamma^2=\frac{E}{\left( \frac{\hbar^2}{2\mu a^2} \right)}\Rightarrow E_n=-\frac{1}{2n^2}\left( \frac{Ze^2}{4\pi\varepsilon_o} \right)^2\frac{\mu}{\hbar^2}$$
+
+          \item Our constraints then become:
+
+            $$n=1,2,\cdots,\infty$$
+            $$l=0,1,\cdots,n-1$$
+            $$m=-l,-l+1,\cdots,l-1,l$$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Hydrogen Energies and Spectrum
+
+    \begin{itemize}
+
+      \item The principal quantum number, $n$, is also called the shell number
+
+      \item We may observe that, as $n\to\infty$ we find the ionization limit
+
+        \begin{itemize}
+
+          \item Note, $E$ does not depend on $m$
+
+        \end{itemize}
+
+      \item For an electron (with a rest energy of $511[\si{\kilo eV}]$), we may find:
+
+        $$E_n=-\frac{13.6}{n^2}$$
+
+      \item The Bohr Radius becomes:
+
+        $$a_o=\frac{4\pi\varepsilon_o\hbar^2}{m_ee^2}$$
+
+      \item We may write the energy scale as:
+
+        $$E_n=-\frac{1}{2n^2}\left( \frac{e^2}{4\pi\varepsilon_oa_o} \right)$$
+
+      \item Noteworthy Features:
+
+        \begin{itemize}
+
+          \item Infinite number of bound states since the Coulomb potential falls of slowly for $r\to\infty$ (finite square well in 3D has only a finite number of bound states)
+
+          \item We compute the degeneracy of $E_n$ by counting up all possible values:
+
+            $$\sum_{l=0}^{n-1}(2l+1)=2\sum_{l=0}^{n-1} l +\sum_{l=0}^{n-1}1$$
+            $$\sum_{l=0}^{n-1}(2l+1)= n(n-1)+n$$
+            $$\sum_{l=0}^{n-1}(2l+1)= n^2$$
+
+          \item If one includes the spin of the $e^-$ atom, the total degeneracy is $2n^2$
+
+          \item $m$ degeneracy is a result of spherical symmetry, and is removed if an electric field or magnetic field is applied
+
+          \item $l$ degeneracy is a result of the $1/r$ potential and is removed if this changes
+
+          \item The energies of emitted or absorbed light can be obtained as:
+
+            $$E_{photon}=\Delta E_{fi}=|E_f-E_i|$$
+            $$|E_f-E_i|=\frac{1}{2}(m_ec^2)\left( \frac{e^2}{4\pi\varepsilon_o\hbar c} \right)^2\Big|\frac{1}{n_i^2}-\frac{1}{n^2_f}\Big|$$
+
+          \item Furthermore, we know:
+
+            $$E_{photon}=\hbar\omega=hv=\frac{hc}{\lambda}$$
+
+          \item We may thus conclude:
+
+            $$\frac{1}{\lambda}=\frac{m_e}{4\pi\hbar^3c}\left( \frac{e^2}{4\pi\varepsilon_o} \right)^2\Big|\frac{1}{n_i^2}-\frac{1}{n^2_f}\Big|$$
+
+          \item Not all transitions are allowed in the hydrogen atom; transitions require a non-zero value of $\langle n_fl_fm_f|V_{int}|n_il_im_i\rangle$
+
+          \item For electromagnetic interactions, the selection rules, which follow from conservation of angular momentum, are:
+
+            $$\Delta l=l_f-l_i=\pm1$$
+            $$\Delta m=m_f-m_i=0,\pm1$$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item The Radial Wave Functions
+
+    \begin{itemize}
+
+      \item Using:
+
+        $$a=\frac{4\pi\varepsilon_o\hbar^2}{m_eZe^2}=\frac{a_o}{Z}$$
+        $$\gamma=\frac{1}{n}$$
+        $$\rho=\frac{r}{a}=\frac{Zr}{a_o}\Rightarrow R_{nl}(r)=\left( \frac{Zr}{a_o} \right)^le^{-Zr/na_o}H\left(\frac{Zr}{a_o}\right)$$
+
+    \end{itemize}
+
+  \item The Overall Hydrogen Wave Function
+
+    $$\ket{nlm}=\psi_{nlm}(r,\theta,\phi)=R_{nl}(r)Y_{l}^m(\theta,\phi)$$
+
+    \begin{itemize}
+
+      \item We then establish the following relationships:
+
+        $$H\ket{nlm}=-\frac{13.6}{n^2}\ket{nlm}$$
+        $$\vec{L}^2\ket{nlm}=l(l+1)\hbar^2\ket{nlm}$$
+        $$L_z\ket{nlm}=m\hbar\ket{nlm}$$
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
