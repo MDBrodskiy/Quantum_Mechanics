@@ -55,17 +55,90 @@
 
     We take $\mu\to m_e$ to give us:
 
+    $$H\psi_{321}=-\frac{\hbar^2}{2m}\left[ \frac{1}{r^2}\frac{\partial}{\partial r}\left( r^2\frac{\partial}{\partial r}\right) -\frac{\vec{L}^2}{r^2\hbar^2}-\frac{2mZe^2}{4\pi\varepsilon_or\hbar^2}\right]\psi_{321}$$
+
+    From here, we proceed to evaluate (note, we simplify the $\theta$ and $\phi$ dependent terms as $\Theta$ and $\Phi$):
+
+    $$H\psi_{321}=-\frac{\hbar^2}{2m}\left[ \sqrt{\frac{1}{3\pi}}\left( \frac{Z}{3a_o} \right)^{7/2}\right]\left[ \frac{1}{r^2}\frac{\partial}{\partial r}\left( 2r^3-\frac{Zr^4}{3a_o} \right)-\left( \frac{6}{r^2}-\frac{mZe^2}{2\pi\varepsilon_or\hbar^2} \right)r^2 \right]e^{-Zr/3a_o}\Theta\Phi$$
+    $$H\psi_{321}=-\frac{\hbar^2}{2m}\left[ \sqrt{\frac{1}{3\pi}}\left( \frac{Z}{3a_o} \right)^{7/2}\right]\left[ \left( 6-\frac{2Zr}{a_o}+\frac{Z^2r^2}{9a_o^2} \right)-6+\frac{mZe^2r}{2\pi\varepsilon_o\hbar^2} \right]e^{-Zr/3a_o}\Theta\Phi$$
+  $$H\psi_{321}=-\frac{\hbar^2}{2m}\left[ \sqrt{\frac{1}{3\pi}}\left( \frac{Z}{3a_o} \right)^{7/2}\right]\left[ \frac{Z^2r^2}{9a_o^2} \right]e^{-Zr/3a_o}\Theta\Phi$$
+  $$H\psi_{321}=-\frac{1}{9}\frac{\hbar^2Z^2}{2ma_o^2}\psi_{321}$$
+  $$\boxed{H\psi_{321}=-\frac{Z^2}{9}R_{nl}\psi_{321}}$$
+
+  Thus, we see that the energy eigenvalue is $-Z^2R_{nl}/9$, as would make sense for $n=3$.
+
   \item
 
     \begin{enumerate}
 
-      \item 
+      \item First and foremost, we see that, for this superposition state, the possible energies are given by the $n$ values, or $n=2,3,4$:
 
-      \item 
+        $$\boxed{E_2=-\frac{13.6}{4}=-3.4[\si{eV}]}$$
+        $$\boxed{E_3=-\frac{13.6}{9}=-1.511[\si{eV}]}$$
+        $$\boxed{E_4=-\frac{13.6}{16}=-.85[\si{eV}]}$$
 
-      \item 
+        The probabilities will be given by the squares of the magnitudes of the coefficients such that:
 
-      \item 
+        $$\boxed{P_{E_2}=\left( \frac{1}{\sqrt{14}} \right)^2=\frac{1}{14}}$$
+        $$\boxed{P_{E_3}=\left( \frac{-2}{\sqrt{14}} \right)^2=\frac{2}{7}}$$
+        $$\boxed{P_{E_4}=\left( \Big|\frac{3i}{\sqrt{14}}\Big| \right)^2=\frac{9}{14}}$$
+
+        Thus, we obtain the following histogram:
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.5\textwidth]{Figures/HW8-2a}
+          \caption{Histogram of Energy Probabilities}
+          \label{fig:1}
+        \end{figure}
+
+        We proceed to calculate the expectation value of energy as:
+
+        $$\langle E\rangle =\bra{\psi|H}\ket{\psi}$$
+        $$\bra{\psi|H}\ket{\psi}=-13.6\sum_{n=1}^{\infty} \frac{P_{E_n}}{n^2}$$
+        $$-13.6\sum_{n=1}^{\infty} \frac{P_{E_n}}{n^2}=-13.6\left( \frac{1/14}{4}+\frac{4/14}{9}+\frac{9/14}{16} \right)$$
+        $$\boxed{\langle E\rangle=-1.221[\si{eV}]}$$
+
+      \item We know that $\vec{L}^2$ is limited to $l(l+1)\hbar^2$, and that $l$ is limited by the superimposed states. Accordingly, we may find that the possible measurements are $\boxed{l=2\hbar^2,6\hbar^2}$. The probabilities can then be calculated as:
+
+        $$\boxed{P_{l=1}=\left( \frac{1}{\sqrt{14}} \right)^2=\frac{1}{14}}$$
+        $$\boxed{P_{l=2}=\left( \frac{-2}{\sqrt{14}} \right)^2+\Big|\frac{3i}{\sqrt{14}}\Big|^2=\frac{13}{14}}$$
+
+        Accordingly, we may plot the histogram as:
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.5\textwidth]{Figures/HW8-2b}
+          \caption{Histogram of Spin Vector Probabilities}
+          \label{fig:2}
+        \end{figure}
+
+        We calculate the expectation value in a manner similar to part (a) to get:
+
+        $$\langle \vec{L^2}\rangle=\hbar^2\left( \frac{2}{14}+\frac{6(13)}{14} \right)$$
+        $$\boxed{\langle \vec{L^2}\rangle=5.7143\hbar^2}$$
+
+      \item By the eigenvalues, we know that $L_z$ can be $m\hbar$. As such, we see that $m=1,-1,2$, which gives us measurements of $\pm\hbar,2\hbar$. We can then find the probabilities as:
+
+        $$\boxed{P_{-\hbar}=\left( \frac{-2}{\sqrt{14}} \right)^2=\frac{2}{7}}$$
+        $$\boxed{P_{\hbar}=\left( \frac{1}{\sqrt{14}} \right)^2=\frac{1}{14}}$$
+        $$\boxed{P_{-\hbar}=\left( \Big|\frac{3i}{\sqrt{14}} \Big|\right)^2=\frac{9}{14}}$$
+
+        We can then plot the histogram as:
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.5\textwidth]{Figures/HW8-2c}
+          \caption{Histogram of $L_z$ Probabilities}
+          \label{fig:3}
+        \end{figure}
+
+        Finally, we calculate the expectation value as:
+
+        $$\langle L_z\rangle = \frac{-4\hbar}{14}+\frac{\hbar}{14}+\frac{18\hbar}{14}$$
+        $$\boxed{\langle L_z\rangle = \frac{15\hbar}{14}}$$
+
+      \item We may observe that the answers to (a), (b), and (c) are not dependent on time (\textit{i}.\textit{e}.\ they are stationary quantities) since the operators commute with the Hamiltonian
 
     \end{enumerate}
 
