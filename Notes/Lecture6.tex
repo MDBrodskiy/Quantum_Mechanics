@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Quantum Mechanics
+% Professor: G. Fiete
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Lecture 6}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: G. Fiete}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Harmonic Oscillator
+
+    \begin{itemize}
+
+      \item Classical
+
+        $$F=-kx$$
+        $$V(x)=\frac{1}{2}kx^2$$
+        $$F=-\frac{dV}{dx}$$
+
+      \item Quantum
+
+        $$E=\frac{p^2}{2m}+\frac{1}{2}kx^2$$
+        $$H=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$$
+        $$\omega=\sqrt{\frac{k}{m}}$$
+
+        \begin{itemize}
+
+          \item Energy eigenvalues can be found as:
+
+            $$E_n=\hbar\omega(n+1/2)$$
+
+          \item We may find:
+
+            $$H=\hbar\omega(aa^{\dagger}+1/2)$$
+
+          \item And from here, we find:
+
+            $$[a,a^{\dagger}]=1$$
+
+            \begin{itemize}
+
+              \item This indicates that the operators $a$ and $a^{\dagger}$ raise and lower the energy eigenstates
+
+              \item We can write this as:
+
+                $$a\ket{E}\propto \ket{E-\hbar\omega}$$
+                $$a^{\dagger}\ket{E}\propto \ket{E+\hbar\omega}$$
+
+              \item These are called ``ladder operators''
+
+              \item Note that there is an asymmetry in the ladder, since $aa^{\dagger}\neq a^{\dagger}a$
+
+              \item Since there is a lowest energy state in the harmonic oscillator well, states can not be lowered in energy indefinitely, such that:
+
+                $$a\ket{E_{lowest}}=0$$
+
+              \item This is called the ladder termination condition
+
+                $$H\ket{E_{lowest}}=\hbar\omega(aa^{\dagger}+1/2)\ket{E_{lowest}}=\frac{\hbar\omega}{2}\ket{E_{lowest}}$$
+
+              \item Thus, we may conclude that the lowest energy is $\hbar\omega/2$
+
+              \item Since this is finite, we say the quantum mechanical ground state has a zero-point energy of $\hbar\omega/2$
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
