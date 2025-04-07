@@ -77,6 +77,51 @@
 
     \end{itemize}
 
+  \item Excited States
+
+    \begin{itemize}
+
+      \item We may obtain:
+        
+        $$\ket{n}=\frac{(a^{\dagger})^n}{\sqrt{n!}}\ket{0}$$
+        $$\phi_n(x)=\frac{1}{\sqrt{n!}}\left[ \sqrt{\frac{m\omega}{2\hbar}}\left( x-\frac{\hbar}{m\omega}\frac{d}{dx} \right)^n \right]\phi_0(x)$$
+
+    \end{itemize}
+
+  \item Dirac Notation
+
+    $$\ket{n}=\ket{\phi_n}=\ket{E_n}=\ket{(n+1/2)\hbar\omega}$$
+
+    \begin{itemize}
+
+      \item With $\phi_n(x)=\bra{x}\ket{n}$
+
+      \item Since $\braket{n}=1$, and $\displaystyle \int_{-\infty}^{\infty} \ket{x}\bra{x}\,dx=\mathbb{1}$
+
+        $$1=\bra{n}\int_{-\infty}^{\infty}\ket{x}\bra{x}\,dx\ket{n}=\int_{-\infty}^{\infty} \phi_n^*(x)\pxi_n(x)\,dx$$
+
+      \item By orthonormality, we have:
+
+        $$\delta_{mn}=\bra{m}\ket{n}=\int_{-\infty}^{\infty} \phi_m^*(x)\phi_n(x)\,dx$$
+
+      \item Since the Hermitian operator states are eigenstates of the Hamiltonian, they form a complete set of states, such that:
+
+        $$\sum_{n=0}^{\infty} \ket{n}\bra{n}=\mathbb{1}$$
+
+      \item A general state $\ket{\psi}$ can be written as:
+
+        $$\ket{\psi}=\sum_{n=0}^{\infty} (\underbrace{\bra{n}\ket{\psi}}_{c_n})\ket{n}$$
+
+      \item We know:
+
+        $$c_n=\int_{-\infty}^{\infty}\phi_n^*(x)\psi(x)\,dx$$
+
+      \item The probability of the state $\ket{\psi}$ having energy $E_n$ is:
+
+        $$P_{E_n}=|\bra{n}\ket{\psi}|^2=|c_n|^2$$
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
