@@ -122,6 +122,57 @@
 
     \end{itemize}
 
+  \item Quantum Hermitian Operator
+
+    \begin{itemize}
+
+      \item We have define the following values:
+
+        $$H=\frac{p^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2$$
+        $$a=\sqrt{\frac{m\omega}{2\hbar}}\left( \hat{x}+i\frac{\hat{p}}{m\omega} \right)$$
+        $$a^{\dagger}=\sqrt{\frac{m\omega}{2\hbar}}\left( \hat{x}-i\frac{\hat{p}}{m\omega} \right)$$
+        $$H=\hbar\omega\left( n+1/2 \right)$$
+
+      \item We know that, for bosons:
+
+        $$[a,a^{\dagger}]=1$$
+
+      \item Matrix Representation
+
+        \begin{itemize}
+
+          \item First, we must choose a basis. The Hamiltonian is diagonal in its own basis:
+
+            $$H=\left( \begin{matrix} \hbar\omega/2 & 0 & \cdots & 0\\ 0 & 3\hbar\omega/2 & \cdots & 0\\ \vdots & \vdots & \ddots & 0\\ 0 & 0 & 0 & \hbar\omega(n+1/2)\end{matrix}\right)$$
+
+          \item Since $c_n=\bra{n}\ket{\psi}$, we have:
+
+            $$\ket{\psi}=\left( \begin{matrix} c_o\\c_1\\\vdots\\c_n\end{matrix} \right)$$
+
+          \item We can now find a matrix representation of the ladder operators:
+
+            $$a\ket{n}=\sqrt{n}\ket{n-1}$$
+            $$a^{\dagger}\ket{n}=\sqrt{n+1}\ket{n+1}$$
+
+          \item We find:
+
+            $$a=\left( \begin{matrix} 0 & 1 & 0 & 0 & \cdots & 0\\ 0 & 0 & \sqrt{2} & 0 & \cdots & 0\\ 0 & 0 & 0 & \sqrt{3} & \cdots & 0\\ \vdots & \vdots & \vdots & \vdots & \ddots & 0\\ 0 & 0 & 0 & 0 & 0 & \sqrt{n}\end{matrix}\right)$$
+            $$a^{\dagger}=\left( \begin{matrix} 0 & 0 & 0 & \cdots & 0\\ 1 & 0 & 0 & \cdots & 0 \\ 0 & \sqrt{2} & 0 & \cdots & 0\\ 0 & 0 & \sqrt{3} & \cdots & 0\\ \vdots & \vdots & \vdots & \ddots & 0\\ 0 & 0 & 0 & 0 & \sqrt{n}\end{matrix}\right)$$
+
+          \item Furthermore, by definition of the Hermitian matrices, we find:
+
+            $$\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}\left( \begin{matrix} 0 & 1 & 0 & 0 & \cdots & 0\\ 1 & 0 & \sqrt{2} & 0 & \cdots & 0\\ 0 & \sqrt{2} & 0 & \sqrt{3} & \cdots & 0\\ 0 & 0 & \sqrt{3} & 0 & \ddots & 0\\ \vdots & \vdots & \vdots & \ddots & \ddots & \sqrt{n}\\ 0 & 0 & 0 & 0 & \sqrt{n} & 0\end{matrix}\right)$$
+            $$\hat{p}=i\sqrt{\frac{\hbar m\omega}{2}}\left( \begin{matrix} 0 & -1 & 0 & 0 & \cdots & 0\\ 1 & 0 & -\sqrt{2} & 0 & \cdots & 0\\ 0 & \sqrt{2} & 0 & -\sqrt{3} & \cdots & 0\\ 0 & 0 & \sqrt{3} & 0 & \ddots & 0\\ \vdots & \vdots & \vdots & \ddots & \ddots & -\sqrt{n}\\ 0 & 0 & 0 & 0 & \sqrt{n} & 0\end{matrix}\right)$$
+
+          \item This can be written formulaically as:
+
+            $$\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}(a^{\dagger}+a)$$
+            $$\hat{p}=\sqrt{\frac{\hbar m\omega}{2}}(a^{\dagger}-a)$$
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
