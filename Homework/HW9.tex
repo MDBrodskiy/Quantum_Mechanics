@@ -16,15 +16,142 @@
 
 \begin{enumerate}
 
-  \item
+  \item We begin by writing the ground state of the oscillator as:
+
+    $$\phi_0*(x)=\sqrt[4]{\left( \frac{m\omega}{\pi\hbar} \right)}e^{-m\omega x^2/(2\hbar)}$$
+
+    We take $\beta^2=m\omega/\hbar$ to get:
+
+    $$\phi_0*(x)=\sqrt[4]{\left( \frac{\beta^2}{\pi} \right)}e^{-\beta^2x^2/2$$
 
     \begin{enumerate}
 
-      \item 
+      \item We may begin by calculating the expectation value of position as:
 
-      \item 
+        $$\langle x\rangle=\int_{-\infty}^{\infty} \phi_0^*(x)\cdot  x\cdot \phi_0(x)\,dx$$
 
-      \item 
+        We may observe that this gives us:
+
+        $$\langle x\rangle=\int_{-\infty}^{\infty} x|\phi_0*(x)|^2\,dx$$
+
+        Which ultimately means, due to even symmetry, that:
+
+        $$\boxed{\langle x \rangle=0}$$
+
+        Similarly, we compute the momentum:
+
+        $$\langle p\rangle=-i\hbar\int_{-\infty}^{\infty} \phi_0^*(x)\frac{d}{dx} \phi_0(x)\,dx$$
+
+        We enter the function to get:
+
+        $$\langle p\rangle=-i\sqrt{\frac{m\omega\hbar}{\pi}}\int_{-\infty}^{\infty} \left( e^{-\beta^2x^2/2} \right)\left( -\beta^2 xe^{-\beta^2x^2/2} \right)\,dx$$
+        $$\langle p\rangle=-i\sqrt{\frac{m\omega\hbar}{\pi}}\int_{-\infty}^{\infty} -\beta^2xe^{-\beta^2x^2}\,dx$$
+
+        And, once again, we get:
+
+        $$\boxed{\langle p\rangle=0}$$
+
+        We then find the expectations of the squares:
+
+        $$\langle x^2\rangle=\sqrt{\frac{\beta^2}{\pi}}\int_{-\infty}^{\infty} x^2e^{-\beta^2x^2}\,dx$$
+        $$\langle x^2\rangle=\frac{1}{2\beta^2}$$
+        $$\boxed{\langle x^2\rangle=\frac{\hbar}{2m\omega}}$$
+
+        And then for the momentum:
+
+        $$\langle p^2\rangle=(-i\hbar)^2\int_{-\infty}^{\infty} \phi_0^*(x)\frac{d^2}{dx^2}\left[ \phi_0(x) \right]\,dx$$
+        $$\langle p^2\rangle=-\hbar^2\sqrt{\frac{\beta^2}{\pi}}\int_{-\infty}^{\infty} e^{-\beta^2x^2/2}\frac{d^2}{dx^2}\left[ e^{-\beta^2x^2/2} \right]\,dx$$
+        $$\langle p^2\rangle=-\hbar^2\sqrt{\frac{\beta^2}{\pi}}\int_{-\infty}^{\infty} e^{-\beta^2x^2/2}\frac{d}{dx}\left[ -\beta^2xe^{-\beta^2x^2/2} \right]\,dx$$
+        $$\langle p^2\rangle=-\hbar^2\sqrt{\frac{\beta^2}{\pi}}\int_{-\infty}^{\infty} e^{-\beta^2x^2/2}\left[ \beta^4xe^{-\beta^2x^2/2}-\beta^2e^{-\beta^2x^2/2} \right]\,dx$$
+        $$\langle p^2\rangle=-\hbar^2\sqrt{\frac{\beta^2}{\pi}}\int_{-\infty}^{\infty}  \beta^4xe^{-\beta^2x^2}-\beta^2e^{-\beta^2x^2}\,dx$$
+
+        Finally, evaluating gives us:
+
+        $$\langle p^2\rangle=-\hbar^2\sqrt{\frac{\beta^2}{\pi}}\left[ \sqrt{\frac{\beta^2\pi}{4}}-\sqrt{\beta^2\pi} \right]$$
+        $$\langle p^2\rangle=-\hbar^2\left[ \frac{\beta^2}{2}-\beta^2 \right]$$
+        $$\langle p^2\rangle=\frac{\beta^2\hbar^2}{2}$$
+        $$\boxed{\langle p^2\rangle=\frac{m\omega\hbar}{2}}$$
+
+      \item Using the ladder operators, we can write out:
+
+        $$x=\sqrt{\frac{\hbar}{2m\omega}}(a+a^{\dagger})$$
+        $$a^{\dagger}=\frac{1}{\sqrt{2m\omega\hbar}}(ip+m\omega x)$$
+        $$a=\frac{1}{\sqrt{2m\omega\hbar}}(-ip+m\omega x)$$
+
+        This lets us write:
+
+        $$\bra{n|x}\ket{n}=\sqrt{\frac{\hbar}{2m\omega}}\bra{n|a^{\dagger}+a}\ket{n}$$
+
+        We continue to expand:
+
+        $$\bra{n|x}\ket{n}=\sqrt{\frac{\hbar}{2m\omega}}\left[\bra{n|a^{\dagger}}\ket{n}+\bra{n|a}\ket{n}\right]$$
+
+        Since we know:
+
+        $$a^{\dagger}\ket{n}=\sqrt{n+1}\ket{n+1}$$
+        $$a\ket{n}=\sqrt{n}\ket{n-1}$$
+
+        We get:
+
+        $$\bra{n|x}\ket{n}=\sqrt{\frac{\hbar}{2m\omega}}\left[\bra{n|\sqrt{n+1}}\ket{n+1}+\bra{n|\sqrt{n}}\ket{n-1}\right]$$
+
+        Since $\bra{m}\ket{n}=\delta_{mn}=0$, we conclude:
+
+        $$\boxed{\langle x\rangle=0}$$
+
+        We proceed to evaluate the momentum, since we know:
+
+        $$p=i\sqrt{\frac{m\omega\hbar}{2}}(a^{\dagger}-a)$$
+
+        This gives us:
+
+        $$\bra{n|p}\ket{n}=i\sqrt{\frac{m\omega\hbar}{2}}\bra{n|a^{\dagger}-a}\ket{n}$$
+
+        Again, we apply the ladder operator-$n$ relationship to get:
+
+        $$\bra{n|p}\ket{n}=i\sqrt{\frac{m\omega\hbar}{2}}\left[\bra{n|\sqrt{n+1}}\ket{n+1}-\bra{n|\sqrt{n}}\ket{n-1}\right]$$
+
+        Once again, we find:
+
+        $$\boxed{\langle p\rangle=0}$$
+
+        We continue to find the squares as:
+
+        $$\langle x^2\rangle=\frac{\hbar}{2m\omega}\bra{n|a^{\dagger}^2+a^{\dagger}a+aa^{\dagger}+a^2}\ket{n}$$
+
+        Since we know that $\bra{n|a^{\dagger}^2}\ket{n}=\bra{n|a^2}\ket{n}=0$, we get:
+
+        $$\langle x^2\rangle=\frac{\hbar}{2m\omega}\bra{n|aa^{\dagger}+a^{\dagger}a}\ket{n}$$
+        $$\langle x^2\rangle=\frac{\hbar}{2m\omega}\bra{n|n+(n+1)}\ket{n}$$
+        $$\langle x^2\rangle=\frac{\hbar}{2m\omega}(2n+1)$$
+        $$\boxed{\langle x^2\rangle=\frac{\hbar}{m\omega}(n+1/2)}$$
+
+        Given that the process is the same, just with a different coefficient, we may write:
+
+        $$\boxed{\langle p^2\rangle=m\omega\hbar(n+1/2)}$$
+
+        We may observe that the obtained results are in accordance with the values calculated in (a)
+
+      \item First and foremost, we know that:
+
+        $$\Delta x\Delta p\geq\frac{\hbar}{2}$$
+
+        We first find the position as:
+
+        $$\Delta x=\sqrt{\langle x^2\rangle -\langle x\rangle^2}$$
+        $$\Delta x=\sqrt{\langle x^2\rangle}$$
+        $$\Delta x=\sqrt{\frac{\hbar}{m\omega}(n+1/2)}$$
+
+        Similarly, we find the momentum as:
+
+        $$\Delta p=\sqrt{m\omega\hbar(n+1/2)}$$
+
+        Multiplying the two together, we get:
+
+        $$\Delta x\Delta p=\left( \sqrt{\frac{\hbar}{m\omega}(n+1/2)} \right)\left( \sqrt{m\omega\hbar(n+1/2)} \right)$$
+        $$\boxed{\Delta x\Delta p=\hbar(n+1/2)}$$
+
+        Since we know the minimum value of $n$ is 0, we conclude that $\boxed{\Delta x\Delta p\geq \hbar/2}$
 
     \end{enumerate}
 
@@ -32,15 +159,83 @@
 
     \begin{enumerate}
 
-      \item 
+      \item We can normalize by writing:
 
-      \item 
+        $$\braket{\psi}=1$$
+        $$A^2\left[ \bra{0}+2e^{-i\pi/2}\bra{1} \right]\left[ \ket{0}+2e^{i\pi/2}\ket{1} \right]=1$$
+        $$A^2\left[ 1+4 \right]=1$$
+        $$\boxed{A=\sqrt{\frac{1}{5}}}$$
 
-      \item 
+      \item Inserting the normalization constant calculated in (a), in tandem with the time evolution formula, we get:
+
+        $$\ket{\psi(t)}=\frac{1}{\sqrt{5}}\left[ e^{-iE_ot/\hbar}\ket{0}+2e^{(i\pi/2)-iE_1t/\hbar}\ket{1} \right]$$
+
+        We can simplify this to:
+
+        $$\boxed{\ket{\psi(t)}=\frac{e^{-i\omega t/2}}{\sqrt{5}}\left[ \ket{0}+2e^{(i\pi/2)-i\omega t}\ket{1} \right]}$$
+
+
+      \item We may write:
+
+        $$\langle x\rangle=\bra{\psi|x}\ket{\psi}$$
+        $$\langle x\rangle=\sqrt{\frac{\hbar}{2m\omega}}\bra{\psi|a^{\dagger} + a}\ket{\psi}$$
+        $$\langle x\rangle=\frac{1}{5}\sqrt{\frac{\hbar}{2m\omega}}\left[(\bra{0}+2e^{(-i\pi/2)+i\omega t}\bra{1})(a^{\dagger}+a)(\ket{0}+2e^{(i\pi/2)-i\omega t}\ket{1}\right]$$
+          $$\langle x\rangle=\frac{1}{5}\sqrt{\frac{\hbar}{2m\omega}}\left[2e^{(i\pi/2)-i\omega t}\bra{0|a}\ket{1}+2e^{(-i\pi/2)+i\omega t}\bra{1|a^{\dagger}\ket{0}}\right]$$
+          $$\langle x\rangle=\frac{1}{5}\sqrt{\frac{\hbar}{2m\omega}}\left[2e^{(i\pi/2)-i\omega t}\sqrt{1}+2e^{(-i\pi/2)+i\omega t}\sqrt{1}\right]$$
+
+          We may see that this can be simplified to:
+
+          $$\langle x\rangle=\frac{2}{5}\sqrt{\frac{\hbar}{2m\omega}}\left[ie^{-i\omega t}+ie^{i\omega t}\right]$$
+          $$\boxed{\langle x\rangle=\sqrt{\frac{8\hbar}{25m\omega}}\sin(\omega t)}$$
+
+          Similarly, we take momentum as:
+
+          $$\langle p\rangle=\bra{\psi|p}\ket{\psi}$$
+          $$\langle p\rangle=i\sqrt{\frac{m\omega\hbar}{2}}\bra{\psi|a^{\dagger} - a}\ket{\psi}$$
+          $$\langle p\rangle=\frac{i}{5}\sqrt{\frac{m\omega\hbar}{2}}\left[(\bra{0}+2e^{(-i\pi/2)+i\omega t}\bra{1})(a^{\dagger}-a)(\ket{0}+2e^{(i\pi/2)-i\omega t}\ket{1}\right]$$
+
+          We can skip to the same step as the position, since the process is the same, except with a different sign:
+
+          $$\langle p\rangle=\frac{2i}{5}\sqrt{\frac{m\omega\hbar}{2}}\left[-ie^{-i\omega t}-ie^{i\omega t}\right]$$
+          $$\boxed{\langle p\rangle=\sqrt{\frac{8m\omega\hbar}{25}}\cos(\omega t)}$$
+
+          By Ehrenfest's theorem, we know that classical laws must still be obeyed by quantum particles, such that:
+
+          $$\langle p\rangle=m\frac{d}{dt}\langle x\rangle$$
+
+          Inserting the expectation value of $x$ calculated above, we find:
+
+          $$\langle p\rangle = m\sqrt{\frac{8\hbar}{25m\omega}}\frac{d}{dt}[\sin(\omega t)]$$
+
+          Differentiating gives us:
+
+          $$\langle p\rangle = m\sqrt{\frac{8\hbar}{25m\omega}}\omega\cos(\omega t)$$
+
+          We simplify to get:
+
+          $$\langle p\rangle = \sqrt{\frac{8m\omega\hbar}{25}}\cos(\omega t)$$
+
+          Thus, \underline{we confirmed Ehrenfest's theorem}
 
     \end{enumerate}
 
-  \item
+  \item By the measured, we observe that the particle is in a superposition state consisting of $n=0,1$. Since each occurs with equal probability, the normalization constant must be $1/\sqrt{2}$. Applying our time-evolution formula, we may write:
+
+    $$\ket{\psi(t)}=\frac{e^{-i\omega t/2}}{\sqrt{2}}\left[ e^{i\theta_0}\ket{0}+e^{i\theta_1-i\omega t}\ket{1} \right]$$
+
+    Using the same process as (2), we may skip the steps to write:
+
+    $$\langle x\rangle=\sqrt{\frac{\hbar}{2m\omega}}\cos(\omega t+\Delta\theta_{01})$$
+
+    Equating this to the position measurement, we find:
+
+    $$-\sin(\omega t)=\cos(\omega t+\Delta\theta_{01})$$
+
+    Thus, we see that $\Delta\theta_{01}=\pi/2$. Accordingly, we may return to our momentum formula from (2) to get:
+
+    $$\langle p\rangle=\frac{i}{2}\sqrt{\frac{m\omega\hbar}{2}}\left[ e^{i\omega t+i\pi/2}-e^{i\omega t-i\pi/2} \right]$$
+    $$\langle p\rangle=-\sqrt{\frac{m\omega\hbar}{2}}\sin(\omega t +\pi/2)$$
+    $$\boxed{\langle p\rangle=-\sqrt{\frac{m\omega\hbar}{2}}\cos(\omega t)}$$
 
 \end{enumerate}
 
